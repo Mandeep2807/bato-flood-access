@@ -1,0 +1,57 @@
+<!--
+  BATO Step 3.3 - Lee Sigma speckle filter on the Step 3.2 output (linear sigma0, radar geometry).
+
+  Read (BEAM-DIMAP) -> Speckle-Filter (Lee Sigma) -> Write (BEAM-DIMAP)
+
+  The Speckle-Filter node copies the Kuro Siwo node (configs/grd_preprocessing.xml) parameter for
+  parameter. Kuro Siwo applies it directly after Calibration, i.e. on linear sigma0 in radar
+  geometry - the same input this graph receives. Lee Sigma uses only numLooksStr, windowSize,
+  targetWindowSizeStr and sigmaStr (filled from config preprocessing.s1_speckle). filterSizeX/Y,
+  dampingFactor, estimateENL, enl and anSize belong to other filters and are NOT used by Lee Sigma;
+  they are written with the Kuro Siwo values so the node is identical and nothing relies on SNAP
+  defaults. No terrain correction, no dB conversion, no normalisation.
+
+  ${...} placeholders are filled by bato.preprocessing.snap.render_graph; the filled copy is saved
+  next to the output and its SHA-256 recorded in provenance.
+-->
+<graph id="bato_s1_speckle">
+  <version>1.0</version>
+  <node id="Read">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>${input_file}</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+  <node id="Speckle-Filter">
+    <operator>Speckle-Filter</operator>
+    <sources>
+      <sourceProduct refid="Read"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <sourceBands>${source_bands}</sourceBands>
+      <filter>${filter}</filter>
+      <filterSizeX>3</filterSizeX>
+      <filterSizeY>3</filterSizeY>
+      <dampingFactor>2</dampingFactor>
+      <estimateENL>true</estimateENL>
+      <enl>1.0</enl>
+      <numLooksStr>${num_looks}</numLooksStr>
+      <windowSize>${window_size}</windowSize>
+      <targetWindowSizeStr>${target_window_size}</targetWindowSizeStr>
+      <sigmaStr>${sigma}</sigmaStr>
+      <anSize>50</anSize>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="Speckle-Filter"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>${output_file}</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+</graph>

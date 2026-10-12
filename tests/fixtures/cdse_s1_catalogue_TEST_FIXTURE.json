@@ -1,0 +1,1718 @@
+{
+ "_TEST_FIXTURE": "TEST FIXTURE - SYNTHETIC. Not real Copernicus data. Records imitate the shape of a CDSE OData product-search page ($expand=Attributes) for Sentinel-1, with invented ids, names, dates and footprints. Each record exercises one classification rule; see tests/unit/test_s1_catalogue.py. Attribute VALUE formats (e.g. 'VV&VH') are our best understanding and are OPEN until checked against a live response.",
+ "@odata.context": "$metadata#Products(Attributes())",
+ "value": [
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0001",
+   "Name": "S1A_IW_GRDH_1SDV_20260802T001520_20260802T001545_065000_0A1B01_1A01.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-02T00:15:20.412Z",
+    "End": "2026-08-02T00:15:20.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0002",
+   "Name": "S1A_IW_GRDH_1SDV_20260814T001521_20260814T001546_065175_0A1B02_1A02.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-14T00:15:21.412Z",
+    "End": "2026-08-14T00:15:21.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0003",
+   "Name": "S1C_IW_GRDH_1SDV_20260820T001519_20260820T001544_009100_00C003_1A03.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-20T00:15:19.412Z",
+    "End": "2026-08-20T00:15:19.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "C",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0004",
+   "Name": "S1A_IW_GRDH_1SDV_20260826T001520_20260826T001545_065350_0A1B04_1A04.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-26T00:15:20.412Z",
+    "End": "2026-08-26T00:15:20.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0005",
+   "Name": "S1C_IW_GRDH_1SDV_20260901T001519_20260901T001544_009275_00C005_1A05.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-09-01T00:15:19.412Z",
+    "End": "2026-09-01T00:15:19.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "C",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0006",
+   "Name": "S1A_IW_GRDH_1SDV_20260907T001520_20260907T001545_065525_0A1B06_1A06.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-09-07T00:15:20.412Z",
+    "End": "2026-09-07T00:15:20.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0007",
+   "Name": "S1A_IW_SLC__1SDV_20260907T001518_20260907T001543_065525_0A1B06_1A07.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-09-07T00:15:18.412Z",
+    "End": "2026-09-07T00:15:18.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_SLC__1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0008",
+   "Name": "S1A_EW_GRDM_1SDH_20260810T001010_20260810T001035_065110_0A1B08_1A08.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-10T00:10:10.412Z",
+    "End": "2026-08-10T00:10:10.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "EW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "EW_GRDM_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "HH&HV",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0009",
+   "Name": "S1A_IW_GRDH_1SDV_20260821T123005_20260821T123030_065290_0A1B09_1A09.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-21T12:30:05.412Z",
+    "End": "2026-08-21T12:30:05.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "ASCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 85,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0010",
+   "Name": "S1A_IW_GRDH_1SDV_20260902T123006_20260902T123031_065465_0A1B0A_1A0A.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-09-02T12:30:06.412Z",
+    "End": "2026-09-02T12:30:06.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "ASCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 85,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0011",
+   "Name": "S1A_IW_GRDH_1SSH_20260809T123005_20260809T123030_065115_0A1B0B_1A0B.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-09T12:30:05.412Z",
+    "End": "2026-08-09T12:30:05.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "HH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "ASCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 85,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0012",
+   "Name": "S1A_IW_GRDH_1SDV_20260907T001520_20260907T001545_065525_0A1B06_1A0C_COG.SAFE",
+   "PublicationDate": "2026-09-30T12:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-09-07T00:15:20.412Z",
+    "End": "2026-09-07T00:15:20.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S-COG",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0013",
+   "Name": "S1A_IW_GRDH_1SDV_20260829T002010_20260829T002035_065395_0A1B0D_1A0D.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-29T00:20:10.412Z",
+    "End": "2026-08-29T00:20:10.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       86.0,
+       28.1
+      ],
+      [
+       84.6,
+       28.1
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 121,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0014",
+   "Name": "S1A_IW_GRDH_1SDV_20260829T002035_20260829T002035_065395_0A1B0D_1A0E.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-29T00:20:35.412Z",
+    "End": "2026-08-29T00:20:35.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.6,
+       28.08
+      ],
+      [
+       86.0,
+       28.08
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.6,
+       28.08
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 121,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0015",
+   "Name": "S1A_IW_GRDH_1SDV_20260828T124510_20260828T124535_065380_0A1B0F_1A0F.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-28T12:45:10.412Z",
+    "End": "2026-08-28T12:45:10.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       85.3,
+       27.4
+      ],
+      [
+       86.1,
+       27.4
+      ],
+      [
+       86.1,
+       28.9
+      ],
+      [
+       85.3,
+       28.9
+      ],
+      [
+       85.3,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "ASCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 158,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0016",
+   "Name": "S1A_IW_GRDH_1SDV_20260803T001520_20260803T001545_065015_0A1B10_1A10.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-03T00:15:20.412Z",
+    "End": "2026-08-03T00:15:20.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0017",
+   "Name": "S1A_IW_GRDH_1SDV_20260804T001520_20260804T001545_065030_0A1B11_1A11.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-04T00:15:20.412Z",
+    "End": "2026-08-04T00:15:20.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 300,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0018",
+   "Name": "S1X_IW_GRDH_1SDV_BROKEN_NAME.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "BROK-EN-T::.412Z",
+    "End": "BROK-EN-T::.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0019",
+   "Name": "S1A_IW_GRDH_1SDV_20260805T001520_20260805T001545_065045_0A1B12_1A12.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0020",
+   "Name": "S1A_IW_GRDH_1SDV_20260806T001520_20260806T001545_065060_0A1B13_1A13.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-08-06T00:15:20.412Z",
+    "End": "2026-08-06T00:15:20.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "HH&HV",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  },
+  {
+   "@odata.mediaContentType": "application/octet-stream",
+   "Id": "TEST-FIXTURE-0021",
+   "Name": "S1A_IW_GRDH_1SDV_20260501T001520_20260501T001545_063000_0A1B14_1A14.SAFE",
+   "PublicationDate": "2026-09-30T10:00:00.000Z",
+   "Online": true,
+   "ContentDate": {
+    "Start": "2026-05-01T00:15:20.412Z",
+    "End": "2026-05-01T00:15:20.412Z"
+   },
+   "GeoFootprint": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       84.7,
+       27.4
+      ],
+      [
+       86.1,
+       27.62
+      ],
+      [
+       85.85,
+       28.95
+      ],
+      [
+       84.42,
+       28.73
+      ],
+      [
+       84.7,
+       27.4
+      ]
+     ]
+    ]
+   },
+   "Attributes": [
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformShortName",
+     "Value": "SENTINEL-1",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "platformSerialIdentifier",
+     "Value": "A",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "operationalMode",
+     "Value": "IW",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "productType",
+     "Value": "IW_GRDH_1S",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "polarisationChannels",
+     "Value": "VV&VH",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.StringAttribute",
+     "Name": "orbitDirection",
+     "Value": "DESCENDING",
+     "ValueType": "String"
+    },
+    {
+     "@odata.type": "#OData.CSC.IntegerAttribute",
+     "Name": "relativeOrbitNumber",
+     "Value": 19,
+     "ValueType": "Integer"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+# EMSR927 comparison protocol: machine-readable part of docs/evaluation/emsr927_protocol.md.
+# EVALUATION ONLY. Read by bato.evaluation; no pipeline code reads this file.
+#
+# Life cycle:
+#   draft  -> run scripts/inspect_emsr927.py, then complete every mapping below from what the
+#             official products actually contain (unmapped values stop the evaluation)
+#   frozen -> scripts/evaluate_emsr927.py --freeze-protocol. This checks that every inspected class
+#             and layer is mapped and that no metrics exist under this protocol_id. It sets the two lines below
+#             and records the SHA-256 of this file and of the protocol document. Metrics are refused
+#             unless both hashes still match. Any later change needs a new protocol_id, and the change
+#             must be disclosed.
+protocol_id: bato-emsr927-v1
+status: frozen
+frozen_at: "2026-10-05T08:41:38+00:00"
+
+reference:
+  activation: EMSR927
+  # Official activation record (the source of truth for products, versions, URLs and image times).
+  activation_api: "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations/?code=EMSR927"
+  allowed_download_host: rapidmapping.emergency.copernicus.eu
+  # Only final products (version.statusCode == F) with a downloadPath, whose AOI overlaps the BATO AOI.
+  required_status_code: F
+  # One product per EMS AOI is compared. Rule: smallest worst-case |image time - BATO POST time| over
+  # the product's listed images. Ties go to the higher monitoring number, then the higher version.
+  # The rule is evaluated under every time-zone reading in time.readings and must give the same
+  # product under all of them; otherwise the evaluation stops.
+  product_selection: min_worst_case_abs_gap_to_post
+
+# Layer name stem = the part of a member name between "<PRODUCT>_" and "_v<N>" (e.g. observedEventA in
+# EMSR927_AOI01_GRA_PRODUCT_observedEventA_v1.json). Every stem found in a compared product must be
+# listed here, otherwise the evaluation stops. Mapping completed 2026-10-05 from the inspection of the
+# downloaded official zips, BEFORE the freeze and before any metric (see protocol document, section 11).
+layers:
+  area_of_interest: [areaOfInterestA]          # comparison area
+  observed_event: [observedEventA]             # reference_mass_movement footprint (class-mismatched)
+  transportation: [transportationL]            # road lines with a damage grade: PRIMARY evaluation
+  bridge_context: [transportationP]            # bridge / elevated-road points: counts only, no metric
+  not_analysed: [notAnalysedA]                 # removed from every comparison area
+  not_used:
+    builtUpP: "EMSR927 building damage reference exists, but current BATO production output does not contain a building-impact prediction layer, so building-level validation is not applicable."
+    facilitiesA: "facility polygons; BATO has no facility-impact production output"
+    facilitiesL: "facility lines; BATO has no facility-impact production output"
+    imageFootprintA: "source-image footprint metadata only; image times are taken from the activation record"
+    transportationA: "airfield / helipad polygons, not part of the road network that BATO evaluates"
+
+observed_event:
+  class_field: obj_desc
+  # value -> category. Every value present in a compared product must be listed (fail closed).
+  # Inspected: obj_desc = Landslide, event_type = 6-Mass Movement, det_method = Photo-interpretation.
+  # There is NO open-water / flood class in the products, so nothing maps to flood_water.
+  classes:
+    Landslide: reference_mass_movement
+  # Categories and how each is used (fixed; adding a category needs a new protocol_id):
+  #   flood_water              class-matched pixel comparison with Step 4C FLOOD; NOT CALCULABLE here (absent)
+  #   reference_mass_movement  CLASS-MISMATCHED FOOTPRINT OVERLAP: descriptive overlap shares only
+  #   flood_trace, other_event pixel counts only; removed from every comparison area
+
+transportation:
+  damage_field: damage_gra     # CONFIRM in the re-run inspection (fails closed if absent)
+  # value -> grade. Inspected values (AOI01 GRA, AOI03 GRA MONIT01). Any other value fails closed.
+  classes:
+    Destroyed: destroyed
+    Damaged: damaged
+    Possibly damaged: possibly_damaged
+    No visible damage: no_visible_damage
+    Not Analysed: not_analysed
+  # Each comparison places every grade in exactly one of positive / negative / excluded (validated).
+  comparisons:
+    primary_destroyed:
+      role: primary
+      label: "BATO BLOCKED vs EMSR927 road DESTROYED"
+      positive: [destroyed]
+      negative: [no_visible_damage]
+      excluded: [damaged, possibly_damaged, not_analysed]
+    supplementary_any_damage:
+      role: supplementary
+      label: "SUPPLEMENTARY: BATO BLOCKED vs EMSR927 road DESTROYED + DAMAGED + POSSIBLY DAMAGED (not accuracy, not ground truth)"
+      positive: [destroyed, damaged, possibly_damaged]
+      negative: [no_visible_damage]
+      excluded: [not_analysed]
+
+bridge_context:
+  damage_field: damage_gra     # CONFIRM in the re-run inspection
+  # Counts only. BATO has no bridge-damage prediction layer, so no bridge metric exists.
+  classes:
+    Destroyed: destroyed
+    Possibly damaged: possibly_damaged
+
+roads:
+  match_distance_m: 20.0      # connectivity road_buffer_m (10 m) + 10 m for OSM/EMS line offsets
+  min_matched_length_m: 25.0  # = connectivity min_blocked_run_m; a segment shorter than this needs its whole length
+  sample_step_m: 5.0
+  min_inside_fraction: 0.5    # share of a BATO segment's samples inside the comparison area
+
+pixels:
+  tolerance_px: 1             # 3 x 3 neighbourhood (8-connected), one 10 m pixel each way
+
+time:
+  # Time zone of the EMS acquisition/event times. The activation record gives them without a zone marker.
+  # Set to UTC or Asia/Kathmandu ONLY with evidence quoted from the official product/metadata.
+  ems_time_zone: undetermined
+  ems_time_zone_evidence: null
+  # Readings used while undetermined (fixed offsets; Nepal has no daylight saving).
+  readings: {UTC: "+00:00", Asia/Kathmandu: "+05:45"}

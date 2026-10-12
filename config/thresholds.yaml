@@ -1,0 +1,173 @@
+# BATO decision thresholds.
+#
+# Every threshold is recorded with:
+#   value        - the number used by the code
+#   unit         - physical unit, or "fraction", "count", "ratio"
+#   provisional  - true until justified by measurements on validation data
+#   rationale    - why this starting value was chosen
+#
+# RULE: thresholds are tuned only on training/validation data (Kuro Siwo
+# validation events, etc.). They are NEVER tuned against the EMSR927 reference
+# or any other published damage map - that would leak the evaluation reference
+# into the system.
+
+detection:
+  flood_prob_low:
+    value: 0.4
+    unit: probability
+    provisional: true
+    rationale: Below this a pixel is treated as not flooded; between low and high it is uncertain.
+  flood_prob_high:
+    value: 0.7
+    unit: probability
+    provisional: true
+    rationale: At or above this a pixel is treated as flooded. To be set from calibration curves.
+  debris_z_min:
+    value: 3.0
+    unit: standard deviations
+    provisional: true
+    rationale: Backscatter increase (post vs pre-event stack) must exceed this z-score to count as debris/disturbance.
+  min_component_pixels:
+    value: 10
+    unit: count
+    provisional: true
+    rationale: Connected regions smaller than this are treated as speckle noise.
+
+visibility:
+  layover_lia_max_deg:
+    value: 5.0
+    unit: degrees
+    provisional: true
+    rationale: Local incidence angle at or below this is treated as (approximate) layover. Shadow comes from the provider's shadow mask.
+
+# Deterministic SAR change baseline (bato.detection.baseline, docs/baseline_detection.md). A pixel is FLOOD only
+# if POST is open-water dark in VV AND VH, darkened from BOTH pre-event images in VV AND VH, was not already
+# open-water dark before the event, and lies in assessable terrain. Not tuned on any reference or evaluation map.
+# Inherited (not repeated here): detection.min_component_pixels (cluster cleanup) and
+# visibility.layover_lia_max_deg (layover gate).
+baseline_flood:
+  vv_water_db:
+    value: -15.0
+    unit: dB
+    provisional: true
+    basis: physics_literature
+    rationale: >-
+      Calm open water is a specular reflector, so C-band VV sigma0 is very low; fixed open-water thresholds commonly
+      used for Sentinel-1 lie roughly between -15 and -20 dB VV. -15 dB is the permissive end (wind-roughened or
+      turbulent river water is brighter); the change and VH tests constrain it further.
+  vh_water_db:
+    value: -22.0
+    unit: dB
+    provisional: true
+    basis: physics_literature
+    rationale: >-
+      Open water has very low cross-polarised return; commonly used VH thresholds lie roughly between -20 and -25 dB.
+      -22 dB is close to the Sentinel-1 IW noise floor, so VH here confirms darkness rather than resolving it.
+  pre2_change_db:
+    value: -3.0
+    unit: dB
+    provisional: true
+    basis: provisional_engineering
+    rationale: >-
+      POST minus PRE2 must be at most -3 dB (a factor-2 intensity decrease) in VV AND VH: new darkening since the most
+      recent pre-event image, larger than typical speckle-filtered variability. Not measured on BATO data yet.
+  pre1_change_db:
+    value: -3.0
+    unit: dB
+    provisional: true
+    basis: provisional_engineering
+    rationale: >-
+      POST minus PRE1 must also be at most -3 dB in VV AND VH, so the darkening is new relative to BOTH pre-event
+      images (seasonal water already present at PRE1 or PRE2 is not counted). Same value as pre2_change_db.
+  max_slope_deg:
+    value: 15.0
+    unit: degrees
+    provisional: true
+    basis: provisional_engineering
+    rationale: >-
+      Standing water surfaces are horizontal; at GLO-30 slope >= 15 deg (30 m DEM, which smooths gorge floors) a dark
+      pixel cannot be assessed as flood or no-flood, so it is NOT_ASSESSED. Same 15 deg as the Step 4B forensic
+      criterion.
+  shadow_lia_min_deg:
+    value: 85.0
+    unit: degrees
+    provisional: true
+    basis: physics_literature
+    rationale: >-
+      Radar shadow occurs when the approximate local incidence angle reaches 90 deg (slope facing away steeper than
+      90 - incidence); a 5 deg margin mirrors visibility.layover_lia_max_deg. Shadow is dark on every date and is
+      NOT_ASSESSED, never NO_FLOOD.
+  nominal_incidence_deg:
+    value: 39.0
+    unit: degrees
+    provisional: true
+    basis: provisional_engineering
+    rationale: >-
+      Sentinel-1 IW incidence spans about 29-46 deg across the swath; the stack carries no per-pixel incidence, so a
+      mid-swath value is used for the approximate layover/shadow geometry (with the GLO-30 slope and aspect).
+  shadow_search_m:
+    value: 5000.0
+    unit: m
+    provisional: true
+    basis: provisional_engineering
+    rationale: >-
+      Cast shadow: a cell is shadowed if terrain toward the sensor within this distance rises above the ray at
+      (90 - incidence) deg, i.e. more than cot(incidence) ~1.2 m per m. A ridge of relief H shades ~H * tan(incidence)
+      ~0.8 H, so 5 km covers relief well above the AOI's. Catches gorge floors shaded by their walls (flat, so the
+      slope gate cannot), which are dark on every date and must be NOT_ASSESSED, not NO_FLOOD or pre-event water.
+
+road_impact:
+  segment_length_m:
+    value: 50.0
+    unit: m
+    provisional: true
+    rationale: Roads are split into segments of about this length so impacts can be localised.
+  road_buffer_m:
+    value: 10.0
+    unit: m
+    provisional: true
+    rationale: Half road width plus roughly one pixel of geolocation error.
+  min_blocked_run_m:
+    value: 25.0
+    unit: m
+    provisional: true
+    rationale: A contiguous impacted run at least this long marks a segment BLOCKED (about 2-3 pixels at 10 m).
+  min_unobservable_run_m:
+    value: 25.0
+    unit: m
+    provisional: true
+    rationale: A contiguous unobservable run at least this long marks a segment UNCERTAIN.
+
+connectivity:
+  settlement_snap_max_m:
+    value: 500.0
+    unit: m
+    provisional: true
+    rationale: Settlements farther than this from any road have no road access before the event.
+  degraded_detour_ratio:
+    value: 1.5
+    unit: ratio
+    provisional: true
+    rationale: Post-event (pessimistic) route length / pre-event route length at or above this is DEGRADED.
+  building_cluster_eps_m:
+    value: 125.0
+    unit: m
+    provisional: true
+    rationale: Neighbourhood distance for clustering OSM buildings into unnamed settlements.
+  building_cluster_min_buildings:
+    value: 5
+    unit: count
+    provisional: true
+    rationale: Minimum buildings for a cluster to count as a settlement.
+
+confidence:
+  tier_medium_min:
+    value: 0.6
+    unit: probability
+    provisional: true
+    rationale: Calibrated probability at or above this is reported as medium confidence.
+  tier_high_min:
+    value: 0.85
+    unit: probability
+    provisional: true
+    rationale: Calibrated probability at or above this is reported as high confidence.

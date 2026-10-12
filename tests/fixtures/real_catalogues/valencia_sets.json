@@ -1,0 +1,1389 @@
+{
+  "heuristic": "PAIRING HEURISTIC v1 (unvalidated)",
+  "aoi_id": "aoi-0027295ba364",
+  "event_date": "2024-10-29",
+  "event_time_utc": null,
+  "catalogue_digest": "56dbfcf17ad3bf57139d4504938c4fcdf2d273b4c7a0b6696cc554360ca48ed6",
+  "catalogue_retrieved_at": "2026-10-01T17:04:29.401788Z",
+  "config_fingerprint": "534bf33bd5dc8bda3198ea65e046beb0916c5519ce0224876498bbb09379880c",
+  "passes": [
+    {
+      "pass_id": "S1A-A030-20240908T175500",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 30
+      },
+      "role": "pre_event",
+      "start": "2024-09-08T17:55:00.310740Z",
+      "days_from_event": -50.253,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20240908T175500_20240908T175525_055577_06C892_B715.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A030-20240920T175500",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 30
+      },
+      "role": "pre_event",
+      "start": "2024-09-20T17:55:00.597759Z",
+      "days_from_event": -38.253,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20240920T175500_20240920T175525_055752_06CF79_AD9E.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A030-20241002T175500",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 30
+      },
+      "role": "pre_event",
+      "start": "2024-10-02T17:55:00.896839Z",
+      "days_from_event": -26.253,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241002T175500_20241002T175525_055927_06D668_A474.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A030-20241014T175501",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 30
+      },
+      "role": "pre_event",
+      "start": "2024-10-14T17:55:01.278298Z",
+      "days_from_event": -14.253,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241014T175501_20241014T175526_056102_06DD4A_EA88.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A030-20241026T175501",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 30
+      },
+      "role": "pre_event",
+      "start": "2024-10-26T17:55:01.033260Z",
+      "days_from_event": -2.253,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241026T175501_20241026T175526_056277_06E43E_8B84.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A030-20241107T175500",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 30
+      },
+      "role": "post_event",
+      "start": "2024-11-07T17:55:00.834226Z",
+      "days_from_event": 9.747,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241107T175500_20241107T175525_056452_06EB2B_3CCD.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A030-20241119T175500",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 30
+      },
+      "role": "post_event",
+      "start": "2024-11-19T17:55:00.293713Z",
+      "days_from_event": 21.747,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241119T175500_20241119T175525_056627_06F22F_BB96.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A103-20240901T180254",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 103
+      },
+      "role": "pre_event",
+      "start": "2024-09-01T18:02:54.828716Z",
+      "days_from_event": -57.248,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20240901T180254_20240901T180319_055475_06C483_C134.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A103-20240913T180255",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 103
+      },
+      "role": "pre_event",
+      "start": "2024-09-13T18:02:55.297617Z",
+      "days_from_event": -45.248,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20240913T180255_20240913T180320_055650_06CB70_373A.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A103-20240925T180255",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 103
+      },
+      "role": "pre_event",
+      "start": "2024-09-25T18:02:55.478272Z",
+      "days_from_event": -33.248,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20240925T180255_20240925T180320_055825_06D25C_830A.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A103-20241007T180256",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 103
+      },
+      "role": "pre_event",
+      "start": "2024-10-07T18:02:56.455660Z",
+      "days_from_event": -21.248,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241007T180256_20241007T180321_056000_06D943_D46B.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A103-20241019T180256",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 103
+      },
+      "role": "pre_event",
+      "start": "2024-10-19T18:02:56.171072Z",
+      "days_from_event": -9.248,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241019T180256_20241019T180321_056175_06E02E_2D52.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A103-20241031T180256",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 103
+      },
+      "role": "post_event",
+      "start": "2024-10-31T18:02:56.112928Z",
+      "days_from_event": 2.752,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241031T180256_20241031T180321_056350_06E71E_479F.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-A103-20241112T180255",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 103
+      },
+      "role": "post_event",
+      "start": "2024-11-12T18:02:55.367611Z",
+      "days_from_event": 14.752,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241112T180255_20241112T180320_056525_06EE16_DC29.SAFE"
+      ],
+      "scene_coverages": [
+        1.0
+      ],
+      "coverage": 1.0,
+      "metadata_from_product_name": false,
+      "multi_slice": false
+    },
+    {
+      "pass_id": "S1A-D008-20240907T061016",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 8
+      },
+      "role": "pre_event",
+      "start": "2024-09-07T06:10:16.006986Z",
+      "days_from_event": -51.743,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20240907T061016_20240907T061041_055555_06C7B1_ECAC.SAFE",
+        "S1A_IW_GRDH_1SDV_20240907T061041_20240907T061106_055555_06C7B1_2378.SAFE"
+      ],
+      "scene_coverages": [
+        0.9564,
+        0.0433
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D008-20240919T061016",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 8
+      },
+      "role": "pre_event",
+      "start": "2024-09-19T06:10:16.592336Z",
+      "days_from_event": -39.743,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20240919T061016_20240919T061041_055730_06CE99_48B3.SAFE",
+        "S1A_IW_GRDH_1SDV_20240919T061041_20240919T061106_055730_06CE99_196D.SAFE"
+      ],
+      "scene_coverages": [
+        0.9566,
+        0.043
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D008-20241001T061016",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 8
+      },
+      "role": "pre_event",
+      "start": "2024-10-01T06:10:16.744343Z",
+      "days_from_event": -27.743,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241001T061016_20241001T061041_055905_06D589_1523.SAFE",
+        "S1A_IW_GRDH_1SDV_20241001T061041_20241001T061106_055905_06D589_E6FE.SAFE"
+      ],
+      "scene_coverages": [
+        0.9561,
+        0.0436
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D008-20241013T061016",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 8
+      },
+      "role": "pre_event",
+      "start": "2024-10-13T06:10:16.867383Z",
+      "days_from_event": -15.743,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241013T061016_20241013T061041_056080_06DC6A_6C3B.SAFE",
+        "S1A_IW_GRDH_1SDV_20241013T061041_20241013T061106_056080_06DC6A_CE26.SAFE"
+      ],
+      "scene_coverages": [
+        0.955,
+        0.0447
+      ],
+      "coverage": 0.9997,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D008-20241025T061016",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 8
+      },
+      "role": "pre_event",
+      "start": "2024-10-25T06:10:16.567843Z",
+      "days_from_event": -3.743,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241025T061016_20241025T061041_056255_06E360_9A1A.SAFE",
+        "S1A_IW_GRDH_1SDV_20241025T061041_20241025T061106_056255_06E360_91F8.SAFE"
+      ],
+      "scene_coverages": [
+        0.9541,
+        0.0456
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D008-20241106T061016",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 8
+      },
+      "role": "post_event",
+      "start": "2024-11-06T06:10:16.548322Z",
+      "days_from_event": 8.257,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241106T061016_20241106T061041_056430_06EA4C_846A.SAFE",
+        "S1A_IW_GRDH_1SDV_20241106T061041_20241106T061106_056430_06EA4C_621C.SAFE"
+      ],
+      "scene_coverages": [
+        0.9541,
+        0.0455
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D008-20241118T061016",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 8
+      },
+      "role": "post_event",
+      "start": "2024-11-18T06:10:16.410870Z",
+      "days_from_event": 20.257,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241118T061016_20241118T061041_056605_06F14B_3CAD.SAFE",
+        "S1A_IW_GRDH_1SDV_20241118T061041_20241118T061106_056605_06F14B_9C08.SAFE"
+      ],
+      "scene_coverages": [
+        0.9555,
+        0.0442
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D110-20240902T060205",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 110
+      },
+      "role": "pre_event",
+      "start": "2024-09-02T06:02:05.940674Z",
+      "days_from_event": -56.749,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20240902T060205_20240902T060230_055482_06C4CA_BE7D.SAFE",
+        "S1A_IW_GRDH_1SDV_20240902T060230_20240902T060255_055482_06C4CA_23CE.SAFE"
+      ],
+      "scene_coverages": [
+        0.7231,
+        0.2765
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D110-20240914T060206",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 110
+      },
+      "role": "pre_event",
+      "start": "2024-09-14T06:02:06.420739Z",
+      "days_from_event": -44.749,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20240914T060206_20240914T060231_055657_06CBB4_CB93.SAFE",
+        "S1A_IW_GRDH_1SDV_20240914T060231_20240914T060256_055657_06CBB4_2F9A.SAFE"
+      ],
+      "scene_coverages": [
+        0.7212,
+        0.2784
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D110-20240926T060206",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 110
+      },
+      "role": "pre_event",
+      "start": "2024-09-26T06:02:06.587932Z",
+      "days_from_event": -32.749,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20240926T060206_20240926T060231_055832_06D2A3_D682.SAFE",
+        "S1A_IW_GRDH_1SDV_20240926T060231_20240926T060256_055832_06D2A3_8C83.SAFE"
+      ],
+      "scene_coverages": [
+        0.721,
+        0.2786
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D110-20241008T060207",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 110
+      },
+      "role": "pre_event",
+      "start": "2024-10-08T06:02:07.571939Z",
+      "days_from_event": -20.749,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241008T060207_20241008T060232_056007_06D989_F7D8.SAFE",
+        "S1A_IW_GRDH_1SDV_20241008T060232_20241008T060257_056007_06D989_E0C1.SAFE"
+      ],
+      "scene_coverages": [
+        0.7228,
+        0.2768
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D110-20241020T060207",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 110
+      },
+      "role": "pre_event",
+      "start": "2024-10-20T06:02:07.257887Z",
+      "days_from_event": -8.749,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241020T060207_20241020T060232_056182_06E074_54D8.SAFE",
+        "S1A_IW_GRDH_1SDV_20241020T060232_20241020T060257_056182_06E074_2C82.SAFE"
+      ],
+      "scene_coverages": [
+        0.7208,
+        0.2788
+      ],
+      "coverage": 0.9995,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D110-20241101T060207",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 110
+      },
+      "role": "post_event",
+      "start": "2024-11-01T06:02:07.165906Z",
+      "days_from_event": 3.251,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241101T060207_20241101T060232_056357_06E766_FEB3.SAFE",
+        "S1A_IW_GRDH_1SDV_20241101T060232_20241101T060257_056357_06E766_D6C9.SAFE"
+      ],
+      "scene_coverages": [
+        0.7208,
+        0.2788
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    },
+    {
+      "pass_id": "S1A-D110-20241113T060206",
+      "platform": "S1A",
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 110
+      },
+      "role": "post_event",
+      "start": "2024-11-13T06:02:06.491539Z",
+      "days_from_event": 15.251,
+      "scene_names": [
+        "S1A_IW_GRDH_1SDV_20241113T060206_20241113T060231_056532_06EE5B_A154.SAFE",
+        "S1A_IW_GRDH_1SDV_20241113T060231_20241113T060256_056532_06EE5B_1D1C.SAFE"
+      ],
+      "scene_coverages": [
+        0.7192,
+        0.2803
+      ],
+      "coverage": 0.9996,
+      "metadata_from_product_name": false,
+      "multi_slice": true
+    }
+  ],
+  "tracks": [
+    {
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 30
+      },
+      "status": "candidates",
+      "note": "5 pre pass(es), 2 post pass(es)",
+      "pre_pass_ids": [
+        "S1A-A030-20240908T175500",
+        "S1A-A030-20240920T175500",
+        "S1A-A030-20241002T175500",
+        "S1A-A030-20241014T175501",
+        "S1A-A030-20241026T175501"
+      ],
+      "post_pass_ids": [
+        "S1A-A030-20241107T175500",
+        "S1A-A030-20241119T175500"
+      ],
+      "candidates_generated": 18,
+      "candidates": [
+        {
+          "candidate_id": "ts-e82c37165296",
+          "rank": 1,
+          "track": {
+            "orbit_direction": "ascending",
+            "relative_orbit": 30
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-A030-20240908T175500",
+            "S1A-A030-20241026T175501"
+          ],
+          "post_event_pass_id": "S1A-A030-20241107T175500",
+          "additional_pre_pass_ids": [
+            "S1A-A030-20240920T175500",
+            "S1A-A030-20241002T175500",
+            "S1A-A030-20241014T175501"
+          ],
+          "post_gap_days": 9.747,
+          "recent_pre_age_days": 2.253,
+          "pre_separation_days": 48.0,
+          "coverage": 1.0,
+          "score": {
+            "post_gap_score": 0.593875,
+            "pre_recency_score": 0.96245,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 1.0,
+            "quality_score": 1.0,
+            "total": 0.850346
+          },
+          "quality_flags": [],
+          "multi_slice": false,
+          "selection_reason": "2pre+1post: post 9.7 d after the event; pre 50.3 d and 2.3 d before, 48.0 d apart; weakest pass covers 100% of the AOI; flags: none. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-32e96dd819c7",
+          "rank": 2,
+          "track": {
+            "orbit_direction": "ascending",
+            "relative_orbit": 30
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-A030-20240920T175500",
+            "S1A-A030-20241026T175501"
+          ],
+          "post_event_pass_id": "S1A-A030-20241107T175500",
+          "additional_pre_pass_ids": [
+            "S1A-A030-20240908T175500",
+            "S1A-A030-20241002T175500",
+            "S1A-A030-20241014T175501"
+          ],
+          "post_gap_days": 9.747,
+          "recent_pre_age_days": 2.253,
+          "pre_separation_days": 36.0,
+          "coverage": 1.0,
+          "score": {
+            "post_gap_score": 0.593875,
+            "pre_recency_score": 0.96245,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 1.0,
+            "quality_score": 1.0,
+            "total": 0.850346
+          },
+          "quality_flags": [],
+          "multi_slice": false,
+          "selection_reason": "2pre+1post: post 9.7 d after the event; pre 38.3 d and 2.3 d before, 36.0 d apart; weakest pass covers 100% of the AOI; flags: none. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-04ad0f726a2b",
+          "rank": 3,
+          "track": {
+            "orbit_direction": "ascending",
+            "relative_orbit": 30
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-A030-20241002T175500",
+            "S1A-A030-20241026T175501"
+          ],
+          "post_event_pass_id": "S1A-A030-20241107T175500",
+          "additional_pre_pass_ids": [
+            "S1A-A030-20240908T175500",
+            "S1A-A030-20240920T175500",
+            "S1A-A030-20241014T175501"
+          ],
+          "post_gap_days": 9.747,
+          "recent_pre_age_days": 2.253,
+          "pre_separation_days": 24.0,
+          "coverage": 1.0,
+          "score": {
+            "post_gap_score": 0.593875,
+            "pre_recency_score": 0.96245,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 1.0,
+            "quality_score": 1.0,
+            "total": 0.850346
+          },
+          "quality_flags": [],
+          "multi_slice": false,
+          "selection_reason": "2pre+1post: post 9.7 d after the event; pre 26.3 d and 2.3 d before, 24.0 d apart; weakest pass covers 100% of the AOI; flags: none. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-69839089117c",
+          "rank": 4,
+          "track": {
+            "orbit_direction": "ascending",
+            "relative_orbit": 30
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-A030-20240908T175500",
+            "S1A-A030-20241014T175501"
+          ],
+          "post_event_pass_id": "S1A-A030-20241107T175500",
+          "additional_pre_pass_ids": [
+            "S1A-A030-20240920T175500",
+            "S1A-A030-20241002T175500",
+            "S1A-A030-20241026T175501"
+          ],
+          "post_gap_days": 9.747,
+          "recent_pre_age_days": 14.253,
+          "pre_separation_days": 36.0,
+          "coverage": 1.0,
+          "score": {
+            "post_gap_score": 0.593875,
+            "pre_recency_score": 0.76245,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 1.0,
+            "quality_score": 1.0,
+            "total": 0.810346
+          },
+          "quality_flags": [],
+          "multi_slice": false,
+          "selection_reason": "2pre+1post: post 9.7 d after the event; pre 50.3 d and 14.3 d before, 36.0 d apart; weakest pass covers 100% of the AOI; flags: none. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-7579ea71c035",
+          "rank": 5,
+          "track": {
+            "orbit_direction": "ascending",
+            "relative_orbit": 30
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-A030-20240920T175500",
+            "S1A-A030-20241014T175501"
+          ],
+          "post_event_pass_id": "S1A-A030-20241107T175500",
+          "additional_pre_pass_ids": [
+            "S1A-A030-20240908T175500",
+            "S1A-A030-20241002T175500",
+            "S1A-A030-20241026T175501"
+          ],
+          "post_gap_days": 9.747,
+          "recent_pre_age_days": 14.253,
+          "pre_separation_days": 24.0,
+          "coverage": 1.0,
+          "score": {
+            "post_gap_score": 0.593875,
+            "pre_recency_score": 0.76245,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 1.0,
+            "quality_score": 1.0,
+            "total": 0.810346
+          },
+          "quality_flags": [],
+          "multi_slice": false,
+          "selection_reason": "2pre+1post: post 9.7 d after the event; pre 38.3 d and 14.3 d before, 24.0 d apart; weakest pass covers 100% of the AOI; flags: none. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        }
+      ]
+    },
+    {
+      "track": {
+        "orbit_direction": "ascending",
+        "relative_orbit": 103
+      },
+      "status": "candidates",
+      "note": "5 pre pass(es), 2 post pass(es)",
+      "pre_pass_ids": [
+        "S1A-A103-20240901T180254",
+        "S1A-A103-20240913T180255",
+        "S1A-A103-20240925T180255",
+        "S1A-A103-20241007T180256",
+        "S1A-A103-20241019T180256"
+      ],
+      "post_pass_ids": [
+        "S1A-A103-20241031T180256",
+        "S1A-A103-20241112T180255"
+      ],
+      "candidates_generated": 18,
+      "candidates": [
+        {
+          "candidate_id": "ts-8f7b2e8873e7",
+          "rank": 1,
+          "track": {
+            "orbit_direction": "ascending",
+            "relative_orbit": 103
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-A103-20240901T180254",
+            "S1A-A103-20241019T180256"
+          ],
+          "post_event_pass_id": "S1A-A103-20241031T180256",
+          "additional_pre_pass_ids": [
+            "S1A-A103-20240913T180255",
+            "S1A-A103-20240925T180255",
+            "S1A-A103-20241007T180256"
+          ],
+          "post_gap_days": 2.752,
+          "recent_pre_age_days": 9.248,
+          "pre_separation_days": 48.0,
+          "coverage": 1.0,
+          "score": {
+            "post_gap_score": 0.885333,
+            "pre_recency_score": 0.845867,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 1.0,
+            "quality_score": 1.0,
+            "total": 0.92904
+          },
+          "quality_flags": [],
+          "multi_slice": false,
+          "selection_reason": "2pre+1post: post 2.8 d after the event; pre 57.2 d and 9.2 d before, 48.0 d apart; weakest pass covers 100% of the AOI; flags: none. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-08eed9c02a97",
+          "rank": 2,
+          "track": {
+            "orbit_direction": "ascending",
+            "relative_orbit": 103
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-A103-20240913T180255",
+            "S1A-A103-20241019T180256"
+          ],
+          "post_event_pass_id": "S1A-A103-20241031T180256",
+          "additional_pre_pass_ids": [
+            "S1A-A103-20240901T180254",
+            "S1A-A103-20240925T180255",
+            "S1A-A103-20241007T180256"
+          ],
+          "post_gap_days": 2.752,
+          "recent_pre_age_days": 9.248,
+          "pre_separation_days": 36.0,
+          "coverage": 1.0,
+          "score": {
+            "post_gap_score": 0.885333,
+            "pre_recency_score": 0.845867,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 1.0,
+            "quality_score": 1.0,
+            "total": 0.92904
+          },
+          "quality_flags": [],
+          "multi_slice": false,
+          "selection_reason": "2pre+1post: post 2.8 d after the event; pre 45.2 d and 9.2 d before, 36.0 d apart; weakest pass covers 100% of the AOI; flags: none. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-79c46aebedfd",
+          "rank": 3,
+          "track": {
+            "orbit_direction": "ascending",
+            "relative_orbit": 103
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-A103-20240925T180255",
+            "S1A-A103-20241019T180256"
+          ],
+          "post_event_pass_id": "S1A-A103-20241031T180256",
+          "additional_pre_pass_ids": [
+            "S1A-A103-20240901T180254",
+            "S1A-A103-20240913T180255",
+            "S1A-A103-20241007T180256"
+          ],
+          "post_gap_days": 2.752,
+          "recent_pre_age_days": 9.248,
+          "pre_separation_days": 24.0,
+          "coverage": 1.0,
+          "score": {
+            "post_gap_score": 0.885333,
+            "pre_recency_score": 0.845867,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 1.0,
+            "quality_score": 1.0,
+            "total": 0.92904
+          },
+          "quality_flags": [],
+          "multi_slice": false,
+          "selection_reason": "2pre+1post: post 2.8 d after the event; pre 33.2 d and 9.2 d before, 24.0 d apart; weakest pass covers 100% of the AOI; flags: none. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-6933f3e02295",
+          "rank": 4,
+          "track": {
+            "orbit_direction": "ascending",
+            "relative_orbit": 103
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-A103-20240901T180254",
+            "S1A-A103-20241007T180256"
+          ],
+          "post_event_pass_id": "S1A-A103-20241031T180256",
+          "additional_pre_pass_ids": [
+            "S1A-A103-20240913T180255",
+            "S1A-A103-20240925T180255",
+            "S1A-A103-20241019T180256"
+          ],
+          "post_gap_days": 2.752,
+          "recent_pre_age_days": 21.248,
+          "pre_separation_days": 36.0,
+          "coverage": 1.0,
+          "score": {
+            "post_gap_score": 0.885333,
+            "pre_recency_score": 0.645867,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 1.0,
+            "quality_score": 1.0,
+            "total": 0.88904
+          },
+          "quality_flags": [],
+          "multi_slice": false,
+          "selection_reason": "2pre+1post: post 2.8 d after the event; pre 57.2 d and 21.2 d before, 36.0 d apart; weakest pass covers 100% of the AOI; flags: none. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-5bfc38c6fd9e",
+          "rank": 5,
+          "track": {
+            "orbit_direction": "ascending",
+            "relative_orbit": 103
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-A103-20240913T180255",
+            "S1A-A103-20241007T180256"
+          ],
+          "post_event_pass_id": "S1A-A103-20241031T180256",
+          "additional_pre_pass_ids": [
+            "S1A-A103-20240901T180254",
+            "S1A-A103-20240925T180255",
+            "S1A-A103-20241019T180256"
+          ],
+          "post_gap_days": 2.752,
+          "recent_pre_age_days": 21.248,
+          "pre_separation_days": 24.0,
+          "coverage": 1.0,
+          "score": {
+            "post_gap_score": 0.885333,
+            "pre_recency_score": 0.645867,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 1.0,
+            "quality_score": 1.0,
+            "total": 0.88904
+          },
+          "quality_flags": [],
+          "multi_slice": false,
+          "selection_reason": "2pre+1post: post 2.8 d after the event; pre 45.2 d and 21.2 d before, 24.0 d apart; weakest pass covers 100% of the AOI; flags: none. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        }
+      ]
+    },
+    {
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 8
+      },
+      "status": "candidates",
+      "note": "5 pre pass(es), 2 post pass(es)",
+      "pre_pass_ids": [
+        "S1A-D008-20240907T061016",
+        "S1A-D008-20240919T061016",
+        "S1A-D008-20241001T061016",
+        "S1A-D008-20241013T061016",
+        "S1A-D008-20241025T061016"
+      ],
+      "post_pass_ids": [
+        "S1A-D008-20241106T061016",
+        "S1A-D008-20241118T061016"
+      ],
+      "candidates_generated": 18,
+      "candidates": [
+        {
+          "candidate_id": "ts-ba4fc772cdec",
+          "rank": 1,
+          "track": {
+            "orbit_direction": "descending",
+            "relative_orbit": 8
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-D008-20240907T061016",
+            "S1A-D008-20241025T061016"
+          ],
+          "post_event_pass_id": "S1A-D008-20241106T061016",
+          "additional_pre_pass_ids": [
+            "S1A-D008-20240919T061016",
+            "S1A-D008-20241001T061016",
+            "S1A-D008-20241013T061016"
+          ],
+          "post_gap_days": 8.257,
+          "recent_pre_age_days": 3.743,
+          "pre_separation_days": 48.0,
+          "coverage": 0.9996,
+          "score": {
+            "post_gap_score": 0.655958,
+            "pre_recency_score": 0.937617,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 0.9996,
+            "quality_score": 0.9,
+            "total": 0.857029
+          },
+          "quality_flags": [
+            "multi_slice_pass"
+          ],
+          "multi_slice": true,
+          "selection_reason": "2pre+1post: post 8.3 d after the event; pre 51.7 d and 3.7 d before, 48.0 d apart; weakest pass covers 100% of the AOI; flags: multi_slice_pass. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-725bfae3b174",
+          "rank": 2,
+          "track": {
+            "orbit_direction": "descending",
+            "relative_orbit": 8
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-D008-20240919T061016",
+            "S1A-D008-20241025T061016"
+          ],
+          "post_event_pass_id": "S1A-D008-20241106T061016",
+          "additional_pre_pass_ids": [
+            "S1A-D008-20240907T061016",
+            "S1A-D008-20241001T061016",
+            "S1A-D008-20241013T061016"
+          ],
+          "post_gap_days": 8.257,
+          "recent_pre_age_days": 3.743,
+          "pre_separation_days": 36.0,
+          "coverage": 0.9996,
+          "score": {
+            "post_gap_score": 0.655958,
+            "pre_recency_score": 0.937617,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 0.9996,
+            "quality_score": 0.9,
+            "total": 0.857029
+          },
+          "quality_flags": [
+            "multi_slice_pass"
+          ],
+          "multi_slice": true,
+          "selection_reason": "2pre+1post: post 8.3 d after the event; pre 39.7 d and 3.7 d before, 36.0 d apart; weakest pass covers 100% of the AOI; flags: multi_slice_pass. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-80b6d2ebee8a",
+          "rank": 3,
+          "track": {
+            "orbit_direction": "descending",
+            "relative_orbit": 8
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-D008-20241001T061016",
+            "S1A-D008-20241025T061016"
+          ],
+          "post_event_pass_id": "S1A-D008-20241106T061016",
+          "additional_pre_pass_ids": [
+            "S1A-D008-20240907T061016",
+            "S1A-D008-20240919T061016",
+            "S1A-D008-20241013T061016"
+          ],
+          "post_gap_days": 8.257,
+          "recent_pre_age_days": 3.743,
+          "pre_separation_days": 24.0,
+          "coverage": 0.9996,
+          "score": {
+            "post_gap_score": 0.655958,
+            "pre_recency_score": 0.937617,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 0.9996,
+            "quality_score": 0.9,
+            "total": 0.857029
+          },
+          "quality_flags": [
+            "multi_slice_pass"
+          ],
+          "multi_slice": true,
+          "selection_reason": "2pre+1post: post 8.3 d after the event; pre 27.7 d and 3.7 d before, 24.0 d apart; weakest pass covers 100% of the AOI; flags: multi_slice_pass. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-e14ddb38292d",
+          "rank": 4,
+          "track": {
+            "orbit_direction": "descending",
+            "relative_orbit": 8
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-D008-20240907T061016",
+            "S1A-D008-20241013T061016"
+          ],
+          "post_event_pass_id": "S1A-D008-20241106T061016",
+          "additional_pre_pass_ids": [
+            "S1A-D008-20240919T061016",
+            "S1A-D008-20241001T061016",
+            "S1A-D008-20241025T061016"
+          ],
+          "post_gap_days": 8.257,
+          "recent_pre_age_days": 15.743,
+          "pre_separation_days": 36.0,
+          "coverage": 0.9996,
+          "score": {
+            "post_gap_score": 0.655958,
+            "pre_recency_score": 0.737617,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 0.9996,
+            "quality_score": 0.9,
+            "total": 0.817029
+          },
+          "quality_flags": [
+            "multi_slice_pass"
+          ],
+          "multi_slice": true,
+          "selection_reason": "2pre+1post: post 8.3 d after the event; pre 51.7 d and 15.7 d before, 36.0 d apart; weakest pass covers 100% of the AOI; flags: multi_slice_pass. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-42c8df66f194",
+          "rank": 5,
+          "track": {
+            "orbit_direction": "descending",
+            "relative_orbit": 8
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-D008-20240919T061016",
+            "S1A-D008-20241013T061016"
+          ],
+          "post_event_pass_id": "S1A-D008-20241106T061016",
+          "additional_pre_pass_ids": [
+            "S1A-D008-20240907T061016",
+            "S1A-D008-20241001T061016",
+            "S1A-D008-20241025T061016"
+          ],
+          "post_gap_days": 8.257,
+          "recent_pre_age_days": 15.743,
+          "pre_separation_days": 24.0,
+          "coverage": 0.9996,
+          "score": {
+            "post_gap_score": 0.655958,
+            "pre_recency_score": 0.737617,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 0.9996,
+            "quality_score": 0.9,
+            "total": 0.817029
+          },
+          "quality_flags": [
+            "multi_slice_pass"
+          ],
+          "multi_slice": true,
+          "selection_reason": "2pre+1post: post 8.3 d after the event; pre 39.7 d and 15.7 d before, 24.0 d apart; weakest pass covers 100% of the AOI; flags: multi_slice_pass. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        }
+      ]
+    },
+    {
+      "track": {
+        "orbit_direction": "descending",
+        "relative_orbit": 110
+      },
+      "status": "candidates",
+      "note": "5 pre pass(es), 2 post pass(es)",
+      "pre_pass_ids": [
+        "S1A-D110-20240902T060205",
+        "S1A-D110-20240914T060206",
+        "S1A-D110-20240926T060206",
+        "S1A-D110-20241008T060207",
+        "S1A-D110-20241020T060207"
+      ],
+      "post_pass_ids": [
+        "S1A-D110-20241101T060207",
+        "S1A-D110-20241113T060206"
+      ],
+      "candidates_generated": 18,
+      "candidates": [
+        {
+          "candidate_id": "ts-18d1de65f5ec",
+          "rank": 1,
+          "track": {
+            "orbit_direction": "descending",
+            "relative_orbit": 110
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-D110-20240902T060205",
+            "S1A-D110-20241020T060207"
+          ],
+          "post_event_pass_id": "S1A-D110-20241101T060207",
+          "additional_pre_pass_ids": [
+            "S1A-D110-20240914T060206",
+            "S1A-D110-20240926T060206",
+            "S1A-D110-20241008T060207"
+          ],
+          "post_gap_days": 3.251,
+          "recent_pre_age_days": 8.749,
+          "pre_separation_days": 48.0,
+          "coverage": 0.9995,
+          "score": {
+            "post_gap_score": 0.864542,
+            "pre_recency_score": 0.854183,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 0.9995,
+            "quality_score": 0.9,
+            "total": 0.913326
+          },
+          "quality_flags": [
+            "multi_slice_pass"
+          ],
+          "multi_slice": true,
+          "selection_reason": "2pre+1post: post 3.3 d after the event; pre 56.7 d and 8.7 d before, 48.0 d apart; weakest pass covers 100% of the AOI; flags: multi_slice_pass. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-8b4d8e0e373c",
+          "rank": 2,
+          "track": {
+            "orbit_direction": "descending",
+            "relative_orbit": 110
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-D110-20240914T060206",
+            "S1A-D110-20241020T060207"
+          ],
+          "post_event_pass_id": "S1A-D110-20241101T060207",
+          "additional_pre_pass_ids": [
+            "S1A-D110-20240902T060205",
+            "S1A-D110-20240926T060206",
+            "S1A-D110-20241008T060207"
+          ],
+          "post_gap_days": 3.251,
+          "recent_pre_age_days": 8.749,
+          "pre_separation_days": 36.0,
+          "coverage": 0.9995,
+          "score": {
+            "post_gap_score": 0.864542,
+            "pre_recency_score": 0.854183,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 0.9995,
+            "quality_score": 0.9,
+            "total": 0.913326
+          },
+          "quality_flags": [
+            "multi_slice_pass"
+          ],
+          "multi_slice": true,
+          "selection_reason": "2pre+1post: post 3.3 d after the event; pre 44.7 d and 8.7 d before, 36.0 d apart; weakest pass covers 100% of the AOI; flags: multi_slice_pass. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-b9927d504259",
+          "rank": 3,
+          "track": {
+            "orbit_direction": "descending",
+            "relative_orbit": 110
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-D110-20240926T060206",
+            "S1A-D110-20241020T060207"
+          ],
+          "post_event_pass_id": "S1A-D110-20241101T060207",
+          "additional_pre_pass_ids": [
+            "S1A-D110-20240902T060205",
+            "S1A-D110-20240914T060206",
+            "S1A-D110-20241008T060207"
+          ],
+          "post_gap_days": 3.251,
+          "recent_pre_age_days": 8.749,
+          "pre_separation_days": 24.0,
+          "coverage": 0.9995,
+          "score": {
+            "post_gap_score": 0.864542,
+            "pre_recency_score": 0.854183,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 0.9995,
+            "quality_score": 0.9,
+            "total": 0.913326
+          },
+          "quality_flags": [
+            "multi_slice_pass"
+          ],
+          "multi_slice": true,
+          "selection_reason": "2pre+1post: post 3.3 d after the event; pre 32.7 d and 8.7 d before, 24.0 d apart; weakest pass covers 100% of the AOI; flags: multi_slice_pass. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-6d3abcd9de74",
+          "rank": 4,
+          "track": {
+            "orbit_direction": "descending",
+            "relative_orbit": 110
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-D110-20240902T060205",
+            "S1A-D110-20241008T060207"
+          ],
+          "post_event_pass_id": "S1A-D110-20241101T060207",
+          "additional_pre_pass_ids": [
+            "S1A-D110-20240914T060206",
+            "S1A-D110-20240926T060206",
+            "S1A-D110-20241020T060207"
+          ],
+          "post_gap_days": 3.251,
+          "recent_pre_age_days": 20.749,
+          "pre_separation_days": 36.0,
+          "coverage": 0.9996,
+          "score": {
+            "post_gap_score": 0.864542,
+            "pre_recency_score": 0.654183,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 0.9996,
+            "quality_score": 0.9,
+            "total": 0.873346
+          },
+          "quality_flags": [
+            "multi_slice_pass"
+          ],
+          "multi_slice": true,
+          "selection_reason": "2pre+1post: post 3.3 d after the event; pre 56.7 d and 20.7 d before, 36.0 d apart; weakest pass covers 100% of the AOI; flags: multi_slice_pass. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        },
+        {
+          "candidate_id": "ts-0fa6d05af021",
+          "rank": 5,
+          "track": {
+            "orbit_direction": "descending",
+            "relative_orbit": 110
+          },
+          "shape": "2pre+1post",
+          "pre_event_pass_ids": [
+            "S1A-D110-20240914T060206",
+            "S1A-D110-20241008T060207"
+          ],
+          "post_event_pass_id": "S1A-D110-20241101T060207",
+          "additional_pre_pass_ids": [
+            "S1A-D110-20240902T060205",
+            "S1A-D110-20240926T060206",
+            "S1A-D110-20241020T060207"
+          ],
+          "post_gap_days": 3.251,
+          "recent_pre_age_days": 20.749,
+          "pre_separation_days": 24.0,
+          "coverage": 0.9996,
+          "score": {
+            "post_gap_score": 0.864542,
+            "pre_recency_score": 0.654183,
+            "baseline_separation_score": 1.0,
+            "coverage_score": 0.9996,
+            "quality_score": 0.9,
+            "total": 0.873346
+          },
+          "quality_flags": [
+            "multi_slice_pass"
+          ],
+          "multi_slice": true,
+          "selection_reason": "2pre+1post: post 3.3 d after the event; pre 44.7 d and 20.7 d before, 24.0 d apart; weakest pass covers 100% of the AOI; flags: multi_slice_pass. Ranked by PAIRING HEURISTIC v1 (unvalidated)."
+        }
+      ]
+    }
+  ]
+}

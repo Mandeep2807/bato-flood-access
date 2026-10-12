@@ -1,0 +1,99 @@
+<!--
+  BATO Step 3.2 - Sentinel-1 GRD radiometric chain (radar geometry, NO terrain correction).
+
+  Read -> Apply-Orbit-File -> Subset (AOI + buffer) -> ThermalNoiseRemoval
+       -> Remove-GRD-Border-Noise -> Calibration (linear sigma0) -> Write (BEAM-DIMAP)
+
+  Order and values follow the Kuro Siwo SNAP graph (configs/grd_preprocessing.xml) except:
+    * Land-Sea-Mask is omitted (Kuro Siwo's mask uses an SRTM DEM, not an allowed BATO input);
+    * Apply-Orbit-File continueOnFail comes from config (BATO default: false - fail, never skip);
+    * Lee Sigma speckle filtering and terrain correction are later BATO steps (3.3 / 3.4).
+
+  ${...} placeholders are filled by bato.preprocessing.snap.render_graph; the filled
+  ("resolved") copy is saved next to the output and its SHA-256 recorded in provenance.
+  Every parameter that affects the result is written explicitly (no reliance on SNAP defaults).
+-->
+<graph id="bato_s1_radiometric">
+  <version>1.0</version>
+  <node id="Read">
+    <operator>Read</operator>
+    <sources/>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>${input_file}</file>
+    </parameters>
+  </node>
+  <node id="Apply-Orbit-File">
+    <operator>Apply-Orbit-File</operator>
+    <sources>
+      <sourceProduct refid="Read"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <orbitType>${orbit_type}</orbitType>
+      <polyDegree>${orbit_poly_degree}</polyDegree>
+      <continueOnFail>${orbit_continue_on_fail}</continueOnFail>
+    </parameters>
+  </node>
+  <node id="Subset">
+    <operator>Subset</operator>
+    <sources>
+      <sourceProduct refid="Apply-Orbit-File"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <geoRegion>${geo_region}</geoRegion>
+      <subSamplingX>1</subSamplingX>
+      <subSamplingY>1</subSamplingY>
+      <fullSwath>false</fullSwath>
+      <copyMetadata>true</copyMetadata>
+    </parameters>
+  </node>
+  <node id="ThermalNoiseRemoval">
+    <operator>ThermalNoiseRemoval</operator>
+    <sources>
+      <sourceProduct refid="Subset"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <selectedPolarisations>${polarisations}</selectedPolarisations>
+      <removeThermalNoise>${remove_thermal_noise}</removeThermalNoise>
+      <outputNoise>false</outputNoise>
+      <reIntroduceThermalNoise>${reintroduce_thermal_noise}</reIntroduceThermalNoise>
+    </parameters>
+  </node>
+  <node id="Remove-GRD-Border-Noise">
+    <operator>Remove-GRD-Border-Noise</operator>
+    <sources>
+      <sourceProduct refid="ThermalNoiseRemoval"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <selectedPolarisations>${polarisations}</selectedPolarisations>
+      <borderLimit>${border_limit}</borderLimit>
+      <trimThreshold>${trim_threshold}</trimThreshold>
+    </parameters>
+  </node>
+  <node id="Calibration">
+    <operator>Calibration</operator>
+    <sources>
+      <sourceProduct refid="Remove-GRD-Border-Noise"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <auxFile>Product Auxiliary File</auxFile>
+      <outputImageInComplex>false</outputImageInComplex>
+      <outputImageScaleInDb>${output_in_db}</outputImageScaleInDb>
+      <createGammaBand>false</createGammaBand>
+      <createBetaBand>false</createBetaBand>
+      <selectedPolarisations>${polarisations}</selectedPolarisations>
+      <outputSigmaBand>${output_sigma0}</outputSigmaBand>
+      <outputGammaBand>false</outputGammaBand>
+      <outputBetaBand>false</outputBetaBand>
+    </parameters>
+  </node>
+  <node id="Write">
+    <operator>Write</operator>
+    <sources>
+      <sourceProduct refid="Calibration"/>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <file>${output_file}</file>
+      <formatName>BEAM-DIMAP</formatName>
+    </parameters>
+  </node>
+</graph>

@@ -1,0 +1,12 @@
+# Foundation milestone dependencies (mirrors pyproject.toml).
+# Geospatial / ML dependencies are added in the milestone that first needs them.
+pydantic>=2.6,<3
+PyYAML>=6.0
+numpy>=1.26
+
+# Step 3.2 preprocessing validation (ESA SNAP gpt itself is installed separately)
+rasterio>=1.4
+
+# Development
+pytest>=8.0
+ruff>=0.5

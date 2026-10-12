@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" width="1100" height="560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="560" fill="#ffffff"/>
+  <text x="20" y="28" font-size="15" font-weight="bold" fill="#111">Official pipeline (production inputs: Sentinel-1, Copernicus DEM, pre-event OSM)</text>
+
+  <!-- Row 1 -->
+  <g font-size="12" fill="#111">
+    <rect x="20" y="50" width="220" height="92" rx="6" fill="#e8f0fb" stroke="#3b6db3"/>
+    <text x="32" y="72" font-weight="bold">1. Sentinel-1 GRD (CDSE)</text>
+    <text x="32" y="92">Same track: S1D asc., orbit 85</text>
+    <text x="32" y="110">PRE-1 29 Jun, PRE-2 16 Aug,</text>
+    <text x="32" y="128">POST 28 Aug 2026</text>
+
+    <rect x="290" y="50" width="220" height="92" rx="6" fill="#e8f0fb" stroke="#3b6db3"/>
+    <text x="302" y="72" font-weight="bold">2. SNAP preprocessing</text>
+    <text x="302" y="92">Calibration, Lee Sigma,</text>
+    <text x="302" y="110">terrain correction (GLO-30)</text>
+    <text x="302" y="128">EPSG:3857, 10 m, 6-band stack</text>
+
+    <rect x="560" y="50" width="240" height="92" rx="6" fill="#fde9d9" stroke="#c0622b"/>
+    <text x="572" y="72" font-weight="bold">3. Step 4C flood state</text>
+    <text x="572" y="92">New open-water darkening vs</text>
+    <text x="572" y="110">both pre images (VV and VH)</text>
+    <text x="572" y="128">Gates → NOT_ASSESSED reasons</text>
+
+    <rect x="850" y="50" width="230" height="92" rx="6" fill="#eef6ea" stroke="#4f8a3a"/>
+    <text x="862" y="72" font-weight="bold">Copernicus DEM GLO-30</text>
+    <text x="862" y="92">Terrain correction;</text>
+    <text x="862" y="110">slope / layover / shadow /</text>
+    <text x="862" y="128">cast-shadow gates</text>
+  </g>
+  <line x1="240" y1="96" x2="286" y2="96" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="510" y1="96" x2="556" y2="96" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="850" y1="96" x2="804" y2="96" stroke="#4f8a3a" stroke-width="1.6" marker-end="url(#a)"/>
+  <path d="M965,50 L965,38 L400,38 L400,46" fill="none" stroke="#4f8a3a" stroke-width="1.4" marker-end="url(#a)"/>
+
+  <!-- Row 2 -->
+  <g font-size="12" fill="#111">
+    <rect x="20" y="200" width="220" height="92" rx="6" fill="#eef6ea" stroke="#4f8a3a"/>
+    <text x="32" y="222" font-weight="bold">Pre-event OSM (ohsome)</text>
+    <text x="32" y="242">Snapshot = event − 1 day</text>
+    <text x="32" y="260">Roads, places, hospitals,</text>
+    <text x="32" y="278">buildings; edits checked</text>
+
+    <rect x="290" y="200" width="220" height="92" rx="6" fill="#fde9d9" stroke="#c0622b"/>
+    <text x="302" y="222" font-weight="bold">4. Road rule v1</text>
+    <text x="302" y="242">50 m segments, 10 m buffer</text>
+    <text x="302" y="260">FLOOD run ≥ 25 m → BLOCKED</text>
+    <text x="302" y="278">Not assessed → UNOBSERVABLE</text>
+
+    <rect x="560" y="200" width="240" height="92" rx="6" fill="#fde9d9" stroke="#c0622b"/>
+    <text x="572" y="222" font-weight="bold">5. Three graphs + access</text>
+    <text x="572" y="242">pre / post-optimistic /</text>
+    <text x="572" y="260">post-pessimistic → settlement</text>
+    <text x="572" y="278">access state; stretch ranking</text>
+
+    <rect x="850" y="200" width="230" height="92" rx="6" fill="#f2eefa" stroke="#6a4fa3"/>
+    <text x="862" y="222" font-weight="bold">6. Evidence + dashboard</text>
+    <text x="862" y="242">Evidence record per claim,</text>
+    <text x="862" y="260">SHA-256 checks; offline</text>
+    <text x="862" y="278">MapLibre viewer (read-only)</text>
+  </g>
+  <path d="M680,142 L680,170 L400,170 L400,196" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="240" y1="246" x2="286" y2="246" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="510" y1="246" x2="556" y2="246" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="800" y1="246" x2="846" y2="246" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- Not official -->
+  <rect x="20" y="322" width="490" height="66" rx="6" fill="#f4f4f4" stroke="#999" stroke-dasharray="5 4"/>
+  <text x="32" y="344" font-size="12" font-weight="bold" fill="#555">Not part of the official result</text>
+  <text x="32" y="362" font-size="12" fill="#555">FloodViT (Kuro Siwo checkpoint): preliminary, not validated</text>
+  <text x="32" y="379" font-size="12" fill="#555">Debris detector + road rule v2: rejected (criterion (d), control run)</text>
+
+  <!-- Evaluation boundary -->
+  <line x1="20" y1="412" x2="1080" y2="412" stroke="#b33" stroke-width="1.4" stroke-dasharray="8 5"/>
+  <text x="20" y="432" font-size="13" font-weight="bold" fill="#b33">Evaluation only — data/reference, data/eval; no path back into the pipeline (guards + leakage scan)</text>
+
+  <g font-size="12" fill="#111">
+    <rect x="20" y="448" width="300" height="92" rx="6" fill="#fbecec" stroke="#b33"/>
+    <text x="32" y="470" font-weight="bold">Copernicus EMS EMSR927</text>
+    <text x="32" y="490">Official Rapid Mapping products,</text>
+    <text x="32" y="508">downloaded with SHA-256 and</text>
+    <text x="32" y="526">redirect chain recorded</text>
+
+    <rect x="370" y="448" width="330" height="92" rx="6" fill="#fbecec" stroke="#b33"/>
+    <text x="382" y="470" font-weight="bold">Frozen protocol bato-emsr927-v1</text>
+    <text x="382" y="490">Written and hash-frozen before</text>
+    <text x="382" y="508">any metric; class mapping, 20 m /</text>
+    <text x="382" y="526">25 m road matching fixed in advance</text>
+
+    <rect x="750" y="448" width="330" height="92" rx="6" fill="#fbecec" stroke="#b33"/>
+    <text x="762" y="470" font-weight="bold">Case-study comparison</text>
+    <text x="762" y="490">Matched-domain road metrics +</text>
+    <text x="762" y="508">reference coverage; flood metrics</text>
+    <text x="762" y="526">NOT CALCULABLE (no flood class)</text>
+  </g>
+  <line x1="320" y1="494" x2="366" y2="494" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="700" y1="494" x2="746" y2="494" stroke="#333" stroke-width="1.6" marker-end="url(#a)"/>
+  <path d="M965,292 L965,444" fill="none" stroke="#888" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#g)"/>
+  <text x="972" y="372" font-size="11" fill="#666">official outputs,</text>
+  <text x="972" y="386" font-size="11" fill="#666">read-only, hashed</text>
+  <text x="972" y="400" font-size="11" fill="#666">before and after</text>
+</svg>

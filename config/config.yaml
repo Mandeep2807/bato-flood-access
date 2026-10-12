@@ -1,0 +1,229 @@
+# BATO operational settings.
+#
+# Values marked PROVISIONAL are starting points that must be revisited once the
+# relevant milestone produces measurements. Algorithmic decision thresholds live
+# in thresholds.yaml, where every value carries a machine-readable
+# `provisional` flag and a rationale.
+#
+# Relative paths are resolved against the parent directory of this config
+# folder (the repository root by default).
+
+paths:
+  raw: data/raw              # untouched downloads (S1/S2/DEM chips, OSM snapshots)
+  interim: data/interim      # preprocessed rasters, intermediate products
+  processed: data/processed  # detection rasters, impact tables, graphs, evidence
+  reference: data/reference  # EVALUATION ONLY: published reference maps (e.g. EMSR927). Never a pipeline input.
+  eval: data/eval            # EVALUATION ONLY: labelled evaluation sets and metric outputs
+  models: models
+  reports: reports
+  logs: logs
+
+aoi:
+  min_area_km2: 1.0                  # PROVISIONAL: smaller areas give too few pixels for statistics
+  max_area_km2: 1000.0               # PROVISIONAL: bound live runtime; revisit after runtime profiling
+  default_point_half_size_km: 10.0   # PROVISIONAL: a point request becomes a 20 x 20 km box
+  analysis_buffer_km: 15.0           # PROVISIONAL: road-graph buffer so the AOI edge does not create fake islands
+
+event:
+  # Earliest event date accepted. Sentinel-1A began routine operations in
+  # October 2014; earlier dates cannot have Sentinel-1 before/after pairs.
+  min_event_date: 2014-10-03
+  # Acquisitions on the event date itself are ambiguous (before or after the
+  # event?) unless the event time is supplied. "exclude" is the only policy
+  # implemented: such acquisitions are never used as pre or post images.
+  same_day_policy: exclude
+
+sentinel1:
+  acquisition_mode: IW
+  product_type: GRD
+  polarizations: [VV, VH]
+  pre_window_days: 60                # PROVISIONAL: how far back to search for pre-event images
+  post_window_days: 24               # PROVISIONAL: how far forward to search for post-event images
+  min_pre_images: 1                  # a single pre image is allowed but flagged (SINGLE_PRE_IMAGE)
+  max_pre_images: 5                  # PROVISIONAL: pre-event stack size for the change baseline
+  max_post_delay_days: 12            # PROVISIONAL: longer delays are flagged (LONG_POST_DELAY)
+  # PROVISIONAL: a scene is a pairing candidate only if its satellite PASS
+  # (the scene plus adjacent slices of the same pass) covers at least this
+  # fraction of the AOI. Below it the scene is REJECTED_COVERAGE (kept in the
+  # result with the measured fraction, never silently dropped).
+  min_aoi_coverage_fraction: 0.8
+  # GRD resolution class from the product name: H = high resolution (10 m pixel
+  # spacing, the class used for IW flood mapping), M = medium (40 m).
+  grd_resolution_class: H
+  # PROVISIONAL: consecutive slices of one pass start ~25 s apart; scenes on the
+  # same platform and track starting within this gap are treated as one pass.
+  pass_max_gap_s: 120
+  # PROVISIONAL: AOI coverage is measured on an N x N grid of sample points
+  # over the AOI (area-weighted). 200 -> 40,000 points; error well under 1 %
+  # for AOIs of a few km or more.
+  coverage_grid_size: 200
+  # Design principle, not a tunable: pixel-wise change detection only within
+  # one relative orbit. The loader rejects any other value.
+  require_same_relative_orbit: true
+
+# Temporal-set selection (Step 2B): PAIRING HEURISTIC.
+# Every value here is PROVISIONAL: an engineering starting point, not a
+# validated scientific threshold. Change it only with a written reason; do
+# NOT tune it against EMSR927 or any other reference map.
+pairing:
+  heuristic_status: provisional
+  # Two pre-event passes closer than this are not used together: the
+  # baseline should span at least one full single-satellite repeat cycle.
+  min_pre_separation_days: 12
+  # Separation at which the baseline-separation score reaches 1.0.
+  target_pre_separation_days: 24
+  # Ranked candidates kept per track (all generated ones are counted).
+  max_candidates_per_track: 5
+  # If a track has exactly one pre-event pass, also offer 1-pre + 1-post
+  # candidates, flagged SINGLE_PRE_IMAGE and always ranked after 2+1 sets.
+  allow_single_pre_fallback: true
+  # Score weights (must sum to 1). total = sum(weight * component).
+  weights:
+    post_gap: 0.35
+    pre_recency: 0.20
+    baseline_separation: 0.15
+    coverage: 0.20
+    quality: 0.10
+  # quality = product of (1 - penalty) over the flags present.
+  penalties:
+    long_post_delay: 0.5          # post pass later than sentinel1.max_post_delay_days
+    multi_slice_pass: 0.1         # at least one pass needs a mosaic of slices
+    metadata_from_product_name: 0.1  # a field came from the product name, not a catalogue attribute
+    mixed_platforms: 0.0          # e.g. S1A + S1C on the same track (recorded, not penalised)
+
+# Copernicus Data Space Ecosystem: the authoritative acquisition source.
+cdse:
+  # OData product catalogue. Searching is public (no login).
+  odata_url: https://catalogue.dataspace.copernicus.eu/odata/v1/Products
+  # Keycloak token endpoint; only needed for downloads (a later milestone).
+  token_url: https://identity.dataspace.copernicus.eu/auth/realms/CDSE/protocol/openid-connect/token
+  client_id: cdse-public
+  page_size: 100        # records per request
+  max_records: 2000     # hard cap per search; hitting it is reported as truncated, never silent
+  timeout_s: 60
+
+sentinel2:
+  max_scene_cloud_pct: 80.0          # PROVISIONAL: scene-level prefilter; pixel masks are applied later
+  post_window_days: 20               # PROVISIONAL
+  pre_composite_days: 60             # PROVISIONAL
+
+dem:
+  instance: COPERNICUS_30            # Copernicus DEM GLO-30 (allowed input per the PS)
+  # CDSE catalogue attribute 'dataset' of the GLO-30 GeoTIFF (DGED) release.
+  # OPEN: confirm the current release name on the first live DEM search.
+  cdse_dataset: COP-DEM_GLO-30-DGED/2024_1
+  # PROVISIONAL: DEM tiles must cover the AOI plus this margin, so later
+  # terrain correction and road analysis (aoi.analysis_buffer_km) have DEM.
+  buffer_km: 100.0
+
+# Data fetching (Step 2C). Raw downloads are pipeline inputs and always go
+# under paths.raw; they can never be written to reference/eval folders.
+download:
+  # Product download endpoint: <base_url>(<CDSE product id>)/$value (Bearer token).
+  base_url: https://download.dataspace.copernicus.eu/odata/v1/Products
+  # Redirects are followed (Authorization kept) ONLY to https hosts ending in these suffixes.
+  allowed_redirect_suffixes: [dataspace.copernicus.eu]
+  timeout_s: 120          # per connection / read
+  chunk_bytes: 8388608    # 8 MiB
+  max_attempts: 5         # per file, incl. resumes after dropped connections
+  backoff_initial_s: 5.0
+  backoff_max_s: 120.0
+  min_free_disk_ratio: 1.05   # free space must exceed remaining bytes x this
+  verify_existing: true       # re-hash an existing file before skipping it
+  max_scenes_per_run: 12      # safety cap; larger plans need an explicit --max-scenes
+  s1_subdir: sentinel1
+  dem_subdir: copernicus_dem
+  manifest_subdir: manifests
+
+# SNAP Graph Processing Tool (Step 3.2). Machine-specific: excluded from the
+# config fingerprint; the SNAP version actually used is recorded in provenance.
+snap:
+  # Explicit gpt executable. null -> environment variable BATO_SNAP_GPT ->
+  # platform default (Windows: C:/Program Files/esa-snap/bin/gpt.exe;
+  # Linux/macOS: ~/esa-snap/bin/gpt) -> gpt on PATH.
+  gpt_path: null
+  timeout_s: 3600          # one gpt run; exceeded -> the run fails (never silently continues)
+  diag_timeout_s: 180      # gpt --diag and gpt <Operator> -h checks
+  # Memory/cache/threads are NOT set here: SNAP's own gpt.vmoptions and defaults apply
+  # and are recorded from `gpt --diag` in provenance.
+
+# Sentinel-1 preprocessing (Step 3.2: radiometric stage only). These values
+# change results and are part of the config fingerprint.
+preprocessing:
+  output_subdir: preprocessing   # outputs: <paths.interim>/<output_subdir>/<aoi_id>/<pass_id>/<stage>/
+  # PROVISIONAL: radar-geometry crop = AOI bounding box grown by this distance.
+  # 20 km covers aoi.analysis_buffer_km (15 km, road-graph buffer) plus ~5 km
+  # margin for terrain displacement in steep terrain before terrain correction.
+  crop_buffer_m: 20000.0
+  s1_radiometric:
+    graph: s1_radiometric.xml              # src/bato/preprocessing/graphs/
+    orbit_type: Sentinel Precise (Auto Download)
+    orbit_poly_degree: 3
+    # Kuro Siwo used continueOnFail=true. BATO stops instead, so a scene never
+    # silently proceeds without a precise orbit (documented difference).
+    orbit_continue_on_fail: false
+    remove_thermal_noise: true
+    reintroduce_thermal_noise: false
+    border_limit: 500                      # pixels (Kuro Siwo value)
+    trim_threshold: 50.0                   # DN (Kuro Siwo value)
+    output_sigma0: true                    # only sigma0; no beta0/gamma0
+    output_in_db: false                    # linear domain (Kuro Siwo); dB is not allowed here
+  # Step 3.3: speckle filter on the published radiometric output (radar geometry, linear sigma0).
+  # Values = Kuro Siwo configs/grd_preprocessing.xml Speckle-Filter node. Strings are SNAP's own
+  # value-set spellings (checked against `gpt Speckle-Filter -h` before every run).
+  s1_speckle:
+    graph: s1_speckle.xml                  # src/bato/preprocessing/graphs/
+    filter: Lee Sigma                      # the only accepted value: no silent substitution
+    num_looks: "1"                         # numLooksStr (Kuro Siwo: 1)
+    window_size: "7x7"                     # windowSize
+    target_window_size: "3x3"              # targetWindowSizeStr (point-target window)
+    sigma: "0.9"                           # sigmaStr
+  # Step 3.4: Range-Doppler terrain correction of the published speckle output. Projection
+  # (WGS 84 / Pseudo-Mercator, EPSG:3857), 10 m pixels, bilinear image/DEM resampling and
+  # standard-grid alignment are written in the committed graph exactly as in the Kuro Siwo
+  # graph. The DEM is BATO's own Step 2C Copernicus GLO-30 tiles (never SNAP's auto-download).
+  s1_terrain:
+    graph: s1_terrain.xml                  # src/bato/preprocessing/graphs/
+    # PROVISIONAL: the DEM mosaic covers the input footprint plus this margin. Steep terrain is
+    # imaged displaced by up to ~height x cot(incidence) (~15 km for 8 km peaks at 30 deg).
+    dem_margin_km: 20.0
+    # Copernicus DEM heights are geoid (EGM2008) heights; SNAP converts external DEM heights to
+    # ellipsoid heights with EGM96 when true (Kuro Siwo graph value: true).
+    dem_apply_egm: true
+    # No-data value written into the DEM mosaic where no tile exists; passed to SNAP. Not 0.0:
+    # 0 m is a real elevation on coasts.
+    dem_nodata: -32767.0
+
+osm:
+  # Pre-event OpenStreetMap via the ohsome API v2 (historical OSM, GeoParquet;
+  # https://docs.ohsome.org/ohsome-api/v2/). v1 (api.ohsome.org/v1) is retired.
+  api_base_url: https://api.heigit.org/ohsome-api/v2-rc
+  # Every extraction request needs an API key (free: https://account.heigit.org/signup),
+  # read from this environment variable. Never put the key in a file.
+  api_key_env: OHSOME_API_KEY
+  # Snapshot = event_date - snapshot_offset_days, capped at the latest date the
+  # OSM history service provides. Must be >= 1 so no same-day edits leak in.
+  snapshot_offset_days: 1
+  timeout_s: 600.0                   # per request; ohsome streams large extracts
+  output_subdir: osm                 # <paths.raw>/osm/<aoi_id>/snapshot-<date>/
+  # Roads that carry vehicles (footpaths/steps/cycleways excluded). PROVISIONAL.
+  road_highway_values: [motorway, motorway_link, trunk, trunk_link, primary, primary_link, secondary,
+                        secondary_link, tertiary, tertiary_link, unclassified, residential, living_street,
+                        service, track, road]
+  # place=* values that are evaluated as settlements (inside the AOI) ...
+  settlement_place_values: [city, town, village, hamlet]
+  # ... and the subset that also counts as an access destination ("town").
+  town_place_values: [city, town]
+  # Buildings are fetched for the AOI grown by this margin (settlement building-count proxy).
+  building_margin_km: 2.0
+
+connectivity:
+  output_subdir: connectivity        # <paths.processed>/connectivity/<aoi_id>/<candidate_id>/
+
+models:
+  flood_model_path: null             # NOT AVAILABLE YET: set once a trained model exists
+  flood_model_version: null
+
+logging:
+  level: INFO
+  jsonl_file: logs/bato.jsonl        # structured log, one JSON object per line; null disables it

@@ -1,0 +1,20 @@
+# Test areas for LIVE catalogue checks (scripts/s1_catalogue_query.py --preset NAME).
+#
+# These are convenience presets, not pipeline inputs and not expected results:
+# nothing in the code depends on them, and any AOI/date can be given on the
+# command line instead. Boxes are [min_lon, min_lat, max_lon, max_lat] (WGS84)
+# and were drawn by the team, so check them on a map before relying on them.
+
+trishuli_2026:
+  description: >-
+    PS case study - Bhote Koshi-Trishuli corridor (Rasuwa / Nuwakot, Nepal),
+    roughly Rasuwagadhi to Betrawati. Event date from the official Track B PDF.
+  event_date: 2026-08-26
+  bbox: [85.17, 27.97, 85.42, 28.28]   # ~850 km2
+
+valencia_2024:
+  description: >-
+    Outside-Nepal check of the generic search - Valencia (Spain) flash flood of
+    29 October 2024, Horta Sud area. Replace with any other area/date.
+  event_date: 2024-10-29
+  bbox: [-0.50, 39.30, -0.30, 39.50]   # ~380 km2

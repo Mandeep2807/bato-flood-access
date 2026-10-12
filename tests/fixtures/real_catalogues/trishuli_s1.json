@@ -1,0 +1,5233 @@
+{
+  "provider": "cdse-odata",
+  "query_filter": "Collection/Name eq 'SENTINEL-1' and OData.CSC.Intersects(area=geography'SRID=4326;POLYGON((85.170000 27.970000, 85.420000 27.970000, 85.420000 28.280000, 85.170000 28.280000, 85.170000 27.970000))') and ContentDate/Start ge 2026-06-27T00:00:00.000Z and ContentDate/Start lt 2026-09-20T00:00:00.000Z",
+  "aoi_id": "aoi-e893707c2beb",
+  "event_date": "2026-08-26",
+  "event_time_utc": null,
+  "window_start": "2026-06-27T00:00:00Z",
+  "window_end": "2026-09-20T00:00:00Z",
+  "retrieved_at": "2026-10-01T17:03:58.023329Z",
+  "returned_count": 98,
+  "truncated": false,
+  "config_fingerprint": "3efa458007b4bfe713cd325cf54ff5510735848243a8a41f6e99c52ab5e6d97b",
+  "records": [
+    {
+      "product_id": "303b705b-f39f-40a8-a8d9-80ee8d89463a",
+      "name": "S1D_IW_RAW__0SDV_20260629T122134_20260629T122207_003451_006174_325D.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-06-29T12:21:34.803505Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260629T122134_20260629T122207_003451_006174_325D.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-06-29T12:21:34.803505Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                86.606,
+                27.4359
+              ],
+              [
+                86.2259,
+                29.3935
+              ],
+              [
+                83.7158,
+                29.1247
+              ],
+              [
+                84.1425,
+                27.1664
+              ],
+              [
+                86.606,
+                27.4359
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -57.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "9c60c433-795d-4b4e-84be-3b40fca7cab6",
+      "name": "S1D_IW_SLC__1SDV_20260629T122137_20260629T122204_003451_006174_16A3.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-06-29T12:21:37.013042Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260629T122137_20260629T122204_003451_006174_16A3.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-06-29T12:21:37.013042Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.91169,
+                29.19969
+              ],
+              [
+                84.281288,
+                27.516096
+              ],
+              [
+                86.791855,
+                27.922613
+              ],
+              [
+                86.464569,
+                29.603363
+              ],
+              [
+                83.91169,
+                29.19969
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -57.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "a9ec18a6-0b32-4cc5-9c52-9616fa4adef5",
+      "name": "S1D_IW_GRDH_1SDV_20260629T122138_20260629T122203_003451_006174_B38B_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260629T122138_20260629T122203_003451_006174_F84B.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-06-29T12:21:38.502145Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260629T122138_20260629T122203_003451_006174_B38B_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-06-29T12:21:38.502145Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.923981,
+                29.112341
+              ],
+              [
+                84.176689,
+                27.591372
+              ],
+              [
+                86.752121,
+                28.008938
+              ],
+              [
+                86.535568,
+                29.525316
+              ],
+              [
+                83.923981,
+                29.112341
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -57.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260629T122138_20260629T122203_003451_006174_F84B.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "2a07e1d1-5a4f-4b3c-83b8-4d7b29893519",
+      "name": "S1D_IW_GRDH_1SDV_20260629T122138_20260629T122203_003451_006174_F84B.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-06-29T12:21:38.502145Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260629T122138_20260629T122203_003451_006174_F84B.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-06-29T12:21:38.502145Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.923981,
+                29.112341
+              ],
+              [
+                84.176689,
+                27.591372
+              ],
+              [
+                86.752121,
+                28.008938
+              ],
+              [
+                86.535568,
+                29.525316
+              ],
+              [
+                83.923981,
+                29.112341
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -57.485,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-A085-20260629T122138",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "61035708-7ed8-4753-af6e-c6c573486c83",
+      "name": "S1D_IW_SLC__1SDV_20260702T001033_20260702T001100_003487_0062AB_DC0A.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-02T00:10:33.596012Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260702T001033_20260702T001100_003487_0062AB_DC0A.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-02T00:10:33.596012Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.696861,
+                27.014751
+              ],
+              [
+                88.052414,
+                28.641134
+              ],
+              [
+                85.524651,
+                29.044189
+              ],
+              [
+                85.208694,
+                27.420589
+              ],
+              [
+                87.696861,
+                27.014751
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -54.993,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "da5399df-7aed-466b-b469-857e0c16b8a4",
+      "name": "S1D_IW_GRDH_1SDV_20260702T001034_20260702T001059_003487_0062AB_5083.SAFE",
+      "status": "rejected_coverage",
+      "reason": "pass covers 35.6% of the AOI (scene alone 35.6%); minimum 80%",
+      "sensing_start": "2026-07-02T00:10:34.479633Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260702T001034_20260702T001059_003487_0062AB_5083.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-02T00:10:34.479633Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.767067,
+                27.070423
+              ],
+              [
+                88.038818,
+                28.588167
+              ],
+              [
+                85.467598,
+                28.997967
+              ],
+              [
+                85.230774,
+                27.484373
+              ],
+              [
+                87.767067,
+                27.070423
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -54.993,
+      "scene_coverage": 0.356,
+      "pass_id": "S1D-D121-20260702T001034",
+      "pass_coverage": 0.356,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "f6f50bb4-38d3-4b0f-bc37-885be2edf16e",
+      "name": "S1D_IW_GRDH_1SDV_20260702T001034_20260702T001059_003487_0062AB_E9B5_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260702T001034_20260702T001059_003487_0062AB_5083.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-07-02T00:10:34.479633Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260702T001034_20260702T001059_003487_0062AB_E9B5_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-02T00:10:34.479633Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.767067,
+                27.070423
+              ],
+              [
+                88.038818,
+                28.588167
+              ],
+              [
+                85.467598,
+                28.997967
+              ],
+              [
+                85.230774,
+                27.484373
+              ],
+              [
+                87.767067,
+                27.070423
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -54.993,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260702T001034_20260702T001059_003487_0062AB_5083.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "f478e3ac-80df-400e-a5ea-c88e0ab2bfb6",
+      "name": "S1D_IW_RAW__0SDV_20260707T001838_20260707T001910_003560_006530_BDC2.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-07T00:18:38.262932Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260707T001838_20260707T001910_003560_006530_BDC2.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-07T00:18:38.262932Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.7755,
+                29.26
+              ],
+              [
+                83.3954,
+                27.3022
+              ],
+              [
+                85.8552,
+                27.0326
+              ],
+              [
+                86.2817,
+                28.9911
+              ],
+              [
+                83.7755,
+                29.26
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -49.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "066b5c56-faaf-46e4-9384-bf837bb1c5cd",
+      "name": "S1D_IW_SLC__1SDV_20260707T001841_20260707T001908_003560_006530_B2E7.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-07T00:18:41.085696Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260707T001841_20260707T001908_003560_006530_B2E7.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-07T00:18:41.085696Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.727104,
+                27.40683
+              ],
+              [
+                86.083687,
+                29.032543
+              ],
+              [
+                83.544571,
+                29.435232
+              ],
+              [
+                83.228378,
+                27.812258
+              ],
+              [
+                85.727104,
+                27.40683
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -49.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "40c16266-e1ab-434e-8fb3-2b97d0da6860",
+      "name": "S1D_IW_GRDH_1SDV_20260707T001841_20260707T001906_003560_006530_3F50.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-07-07T00:18:41.961719Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260707T001841_20260707T001906_003560_006530_3F50.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-07T00:18:41.961719Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.80851,
+                27.460602
+              ],
+              [
+                86.069458,
+                28.980154
+              ],
+              [
+                83.487083,
+                29.389502
+              ],
+              [
+                83.261497,
+                27.874353
+              ],
+              [
+                85.80851,
+                27.460602
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -49.987,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-D019-20260707T001841",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "b09530a8-b7a5-4d98-9521-9822a73d41f9",
+      "name": "S1D_IW_GRDH_1SDV_20260707T001841_20260707T001906_003560_006530_F676_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260707T001841_20260707T001906_003560_006530_3F50.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-07-07T00:18:41.961719Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260707T001841_20260707T001906_003560_006530_F676_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-07T00:18:41.961719Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.80851,
+                27.460602
+              ],
+              [
+                86.069458,
+                28.980154
+              ],
+              [
+                83.487083,
+                29.389502
+              ],
+              [
+                83.261497,
+                27.874353
+              ],
+              [
+                85.80851,
+                27.460602
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -49.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260707T001841_20260707T001906_003560_006530_3F50.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "3b37b542-f441-40ab-8385-59106d04cc0e",
+      "name": "S1D_IW_RAW__0SDV_20260711T122135_20260711T122207_003626_00675A_B618.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-11T12:21:35.458260Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260711T122135_20260711T122207_003626_00675A_B618.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-11T12:21:35.458260Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                86.6058,
+                27.4358
+              ],
+              [
+                86.2257,
+                29.3934
+              ],
+              [
+                83.7156,
+                29.1246
+              ],
+              [
+                84.1424,
+                27.1662
+              ],
+              [
+                86.6058,
+                27.4358
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -45.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "61e88e18-da65-4c64-a55f-c77d024ccc63",
+      "name": "S1D_IW_SLC__1SDV_20260711T122137_20260711T122205_003626_00675A_00E5.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-11T12:21:37.669852Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260711T122137_20260711T122205_003626_00675A_00E5.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-11T12:21:37.669852Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.911407,
+                29.19981
+              ],
+              [
+                84.281044,
+                27.51622
+              ],
+              [
+                86.791611,
+                27.922781
+              ],
+              [
+                86.464294,
+                29.603529
+              ],
+              [
+                83.911407,
+                29.19981
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -45.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "baa70f94-ebc2-4c70-a8dc-2b9bacef7a7a",
+      "name": "S1D_IW_GRDH_1SDV_20260711T122139_20260711T122204_003626_00675A_0B1C_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260711T122139_20260711T122204_003626_00675A_805D.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-07-11T12:21:39.156915Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260711T122139_20260711T122204_003626_00675A_0B1C_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-11T12:21:39.156915Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.923729,
+                29.112339
+              ],
+              [
+                84.176476,
+                27.59137
+              ],
+              [
+                86.751892,
+                28.008982
+              ],
+              [
+                86.535316,
+                29.525358
+              ],
+              [
+                83.923729,
+                29.112339
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -45.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260711T122139_20260711T122204_003626_00675A_805D.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "1059bc11-40b9-4149-b65d-d3b3ac7b6443",
+      "name": "S1D_IW_GRDH_1SDV_20260711T122139_20260711T122204_003626_00675A_805D.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-07-11T12:21:39.156915Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260711T122139_20260711T122204_003626_00675A_805D.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-11T12:21:39.156915Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.923729,
+                29.112339
+              ],
+              [
+                84.176476,
+                27.59137
+              ],
+              [
+                86.751892,
+                28.008982
+              ],
+              [
+                86.535316,
+                29.525358
+              ],
+              [
+                83.923729,
+                29.112339
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -45.485,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-A085-20260711T122139",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "c47e938e-1345-46bb-a5cb-0689dcad4325",
+      "name": "S1D_IW_SLC__1SDV_20260714T001034_20260714T001101_003662_00689F_A0D2.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-14T00:10:34.382847Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260714T001034_20260714T001101_003662_00689F_A0D2.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-14T00:10:34.382847Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.69709,
+                27.014738
+              ],
+              [
+                88.05265,
+                28.641125
+              ],
+              [
+                85.524925,
+                29.044184
+              ],
+              [
+                85.208961,
+                27.420582
+              ],
+              [
+                87.69709,
+                27.014738
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -42.993,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "df0e40a5-0ee9-408b-84a3-77c1f5d38060",
+      "name": "S1D_IW_GRDH_1SDV_20260714T001035_20260714T001100_003662_00689F_377F.SAFE",
+      "status": "rejected_coverage",
+      "reason": "pass covers 35.5% of the AOI (scene alone 35.5%); minimum 80%",
+      "sensing_start": "2026-07-14T00:10:35.266153Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260714T001035_20260714T001100_003662_00689F_377F.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-14T00:10:35.266153Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.767296,
+                27.070433
+              ],
+              [
+                88.039047,
+                28.588177
+              ],
+              [
+                85.467834,
+                28.99799
+              ],
+              [
+                85.231003,
+                27.484394
+              ],
+              [
+                87.767296,
+                27.070433
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -42.993,
+      "scene_coverage": 0.3551,
+      "pass_id": "S1D-D121-20260714T001035",
+      "pass_coverage": 0.3551,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "4c6b1a51-a725-4cea-8a6d-bccc10523b68",
+      "name": "S1D_IW_GRDH_1SDV_20260714T001035_20260714T001100_003662_00689F_E0AF_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260714T001035_20260714T001100_003662_00689F_377F.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-07-14T00:10:35.266153Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260714T001035_20260714T001100_003662_00689F_E0AF_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-14T00:10:35.266153Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.767296,
+                27.070433
+              ],
+              [
+                88.039047,
+                28.588177
+              ],
+              [
+                85.467834,
+                28.99799
+              ],
+              [
+                85.231003,
+                27.484394
+              ],
+              [
+                87.767296,
+                27.070433
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -42.993,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260714T001035_20260714T001100_003662_00689F_377F.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "1afc9e6d-1576-440f-9782-70525de3215e",
+      "name": "S1D_IW_RAW__0SDV_20260719T001839_20260719T001911_003735_006B26_1792.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-19T00:18:39.202919Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260719T001839_20260719T001911_003735_006B26_1792.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-19T00:18:39.202919Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.7751,
+                29.2602
+              ],
+              [
+                83.395,
+                27.3025
+              ],
+              [
+                85.8549,
+                27.0328
+              ],
+              [
+                86.2813,
+                28.9913
+              ],
+              [
+                83.7751,
+                29.2602
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -37.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "1ea5e676-80de-4824-8a62-f90059592925",
+      "name": "S1D_IW_SLC__1SDV_20260719T001842_20260719T001908_003735_006B26_238B.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-19T00:18:42.023628Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260719T001842_20260719T001908_003735_006B26_238B.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-19T00:18:42.023628Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.727135,
+                27.40667
+              ],
+              [
+                86.083755,
+                29.032625
+              ],
+              [
+                83.54451,
+                29.435326
+              ],
+              [
+                83.228287,
+                27.812109
+              ],
+              [
+                85.727135,
+                27.40667
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -37.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "23beb1cd-5f2f-453b-9711-f38d769b2496",
+      "name": "S1D_IW_GRDH_1SDV_20260719T001842_20260719T001907_003735_006B26_3BF9.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-07-19T00:18:42.901015Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260719T001842_20260719T001907_003735_006B26_3BF9.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-19T00:18:42.901015Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.808556,
+                27.460606
+              ],
+              [
+                86.069359,
+                28.980181
+              ],
+              [
+                83.486893,
+                29.38953
+              ],
+              [
+                83.261436,
+                27.874363
+              ],
+              [
+                85.808556,
+                27.460606
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -37.987,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-D019-20260719T001842",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "233476cd-73bb-4705-be47-08f36f07f2c5",
+      "name": "S1D_IW_GRDH_1SDV_20260719T001842_20260719T001907_003735_006B26_C432_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260719T001842_20260719T001907_003735_006B26_3BF9.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-07-19T00:18:42.901015Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260719T001842_20260719T001907_003735_006B26_C432_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-19T00:18:42.901015Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.808556,
+                27.460606
+              ],
+              [
+                86.069359,
+                28.980181
+              ],
+              [
+                83.486893,
+                29.38953
+              ],
+              [
+                83.261436,
+                27.874363
+              ],
+              [
+                85.808556,
+                27.460606
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -37.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260719T001842_20260719T001907_003735_006B26_3BF9.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "6f8846b2-3b6d-49b4-9107-5f215b6b5e61",
+      "name": "S1D_IW_RAW__0SDV_20260723T122136_20260723T122208_003801_006D5D_3C69.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-23T12:21:36.414955Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260723T122136_20260723T122208_003801_006D5D_3C69.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-23T12:21:36.414955Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                86.6052,
+                27.4359
+              ],
+              [
+                86.2251,
+                29.3934
+              ],
+              [
+                83.715,
+                29.1246
+              ],
+              [
+                84.1418,
+                27.1662
+              ],
+              [
+                86.6052,
+                27.4359
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -33.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "678486a5-e3d6-4111-9972-5649e0888f7e",
+      "name": "S1D_IW_SLC__1SDV_20260723T122138_20260723T122206_003801_006D5D_9AA0.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-23T12:21:38.626545Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260723T122138_20260723T122206_003801_006D5D_9AA0.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-23T12:21:38.626545Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.911201,
+                29.200033
+              ],
+              [
+                84.280853,
+                27.516312
+              ],
+              [
+                86.788918,
+                27.92247
+              ],
+              [
+                86.461548,
+                29.603354
+              ],
+              [
+                83.911201,
+                29.200033
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -33.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "fc6f7d76-2923-46f9-8f36-6f1fd8415b4e",
+      "name": "S1D_IW_GRDH_1SDV_20260723T122140_20260723T122205_003801_006D5D_2C7A_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260723T122140_20260723T122205_003801_006D5D_CDAA.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-07-23T12:21:40.113411Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260723T122140_20260723T122205_003801_006D5D_2C7A_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-23T12:21:40.113411Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.923561,
+                29.11237
+              ],
+              [
+                84.176277,
+                27.59145
+              ],
+              [
+                86.748497,
+                28.008551
+              ],
+              [
+                86.531898,
+                29.524885
+              ],
+              [
+                83.923561,
+                29.11237
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -33.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260723T122140_20260723T122205_003801_006D5D_CDAA.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "a46d5fc7-0d00-496b-9727-6a50e8dfef70",
+      "name": "S1D_IW_GRDH_1SDV_20260723T122140_20260723T122205_003801_006D5D_CDAA.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-07-23T12:21:40.113411Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260723T122140_20260723T122205_003801_006D5D_CDAA.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-23T12:21:40.113411Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.923561,
+                29.11237
+              ],
+              [
+                84.176277,
+                27.59145
+              ],
+              [
+                86.748497,
+                28.008551
+              ],
+              [
+                86.531898,
+                29.524885
+              ],
+              [
+                83.923561,
+                29.11237
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -33.485,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-A085-20260723T122140",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "0eac7721-eb4c-4d17-89dc-734ae7d3eb5d",
+      "name": "S1D_IW_SLC__1SDV_20260726T001035_20260726T001102_003837_006EA0_B173.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-26T00:10:35.226553Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260726T001035_20260726T001102_003837_006EA0_B173.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-26T00:10:35.226553Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.69635,
+                27.014706
+              ],
+              [
+                88.051895,
+                28.641087
+              ],
+              [
+                85.524086,
+                29.044151
+              ],
+              [
+                85.20813,
+                27.420555
+              ],
+              [
+                87.69635,
+                27.014706
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -30.993,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "0614bc68-22ff-41da-8f2d-8118fa31b907",
+      "name": "S1D_IW_GRDH_1SDV_20260726T001036_20260726T001101_003837_006EA0_4109_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260726T001036_20260726T001101_003837_006EA0_D50F.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-07-26T00:10:36.110571Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260726T001036_20260726T001101_003837_006EA0_4109_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-26T00:10:36.110571Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.766541,
+                27.070351
+              ],
+              [
+                88.038292,
+                28.588097
+              ],
+              [
+                85.466972,
+                28.997915
+              ],
+              [
+                85.230148,
+                27.48432
+              ],
+              [
+                87.766541,
+                27.070351
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -30.993,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260726T001036_20260726T001101_003837_006EA0_D50F.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "f9b8ad8d-468d-40f0-a15a-87aa565be083",
+      "name": "S1D_IW_GRDH_1SDV_20260726T001036_20260726T001101_003837_006EA0_D50F.SAFE",
+      "status": "rejected_coverage",
+      "reason": "pass covers 35.9% of the AOI (scene alone 35.9%); minimum 80%",
+      "sensing_start": "2026-07-26T00:10:36.110571Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260726T001036_20260726T001101_003837_006EA0_D50F.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-26T00:10:36.110571Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.766541,
+                27.070351
+              ],
+              [
+                88.038292,
+                28.588097
+              ],
+              [
+                85.466972,
+                28.997915
+              ],
+              [
+                85.230148,
+                27.48432
+              ],
+              [
+                87.766541,
+                27.070351
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -30.993,
+      "scene_coverage": 0.3585,
+      "pass_id": "S1D-D121-20260726T001036",
+      "pass_coverage": 0.3585,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "0d9baa79-48b7-4056-8515-66dda238febb",
+      "name": "S1D_IW_RAW__0SDV_20260731T001839_20260731T001912_003910_007127_3768.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-31T00:18:39.741920Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260731T001839_20260731T001912_003910_007127_3768.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-31T00:18:39.741920Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.7747,
+                29.2602
+              ],
+              [
+                83.3946,
+                27.3025
+              ],
+              [
+                85.8545,
+                27.0329
+              ],
+              [
+                86.2809,
+                28.9914
+              ],
+              [
+                83.7747,
+                29.2602
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -25.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "39ff28f8-38c8-4fd9-bc90-b4a972f24e26",
+      "name": "S1D_IW_SLC__1SDV_20260731T001842_20260731T001909_003910_007127_D448.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-07-31T00:18:42.562630Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260731T001842_20260731T001909_003910_007127_D448.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-31T00:18:42.562630Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.726799,
+                27.406542
+              ],
+              [
+                86.083412,
+                29.032625
+              ],
+              [
+                83.544128,
+                29.435278
+              ],
+              [
+                83.227928,
+                27.811935
+              ],
+              [
+                85.726799,
+                27.406542
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -25.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "a8a1b64c-9f94-4a02-9c90-bcb17ff2c90a",
+      "name": "S1D_IW_GRDH_1SDV_20260731T001843_20260731T001908_003910_007127_06F1_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260731T001843_20260731T001908_003910_007127_A008.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-07-31T00:18:43.440067Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260731T001843_20260731T001908_003910_007127_06F1_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-31T00:18:43.440067Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.808228,
+                27.460602
+              ],
+              [
+                86.069,
+                28.980179
+              ],
+              [
+                83.48642,
+                29.389492
+              ],
+              [
+                83.261002,
+                27.874325
+              ],
+              [
+                85.808228,
+                27.460602
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -25.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260731T001843_20260731T001908_003910_007127_A008.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "121393cf-ab9d-4e06-8f08-8e99fb86f244",
+      "name": "S1D_IW_GRDH_1SDV_20260731T001843_20260731T001908_003910_007127_A008.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-07-31T00:18:43.440067Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260731T001843_20260731T001908_003910_007127_A008.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-07-31T00:18:43.440067Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.808228,
+                27.460602
+              ],
+              [
+                86.069,
+                28.980179
+              ],
+              [
+                83.48642,
+                29.389492
+              ],
+              [
+                83.261002,
+                27.874325
+              ],
+              [
+                85.808228,
+                27.460602
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -25.987,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-D019-20260731T001843",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "ecb5cb73-0f16-4471-b341-deaa2770e107",
+      "name": "S1D_IW_RAW__0SDV_20260804T122136_20260804T122209_003976_00737A_5F09.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-04T12:21:36.794472Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260804T122136_20260804T122209_003976_00737A_5F09.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-04T12:21:36.794472Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                86.6057,
+                27.436
+              ],
+              [
+                86.2256,
+                29.3936
+              ],
+              [
+                83.7155,
+                29.1247
+              ],
+              [
+                84.1423,
+                27.1663
+              ],
+              [
+                86.6057,
+                27.436
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -21.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "4d86cdb8-bdd0-4764-acf2-4c56d54ad719",
+      "name": "S1D_IW_SLC__1SDV_20260804T122139_20260804T122206_003976_00737A_F90B.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-04T12:21:39.008116Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260804T122139_20260804T122206_003976_00737A_F90B.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-04T12:21:39.008116Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.911606,
+                29.200054
+              ],
+              [
+                84.281258,
+                27.516462
+              ],
+              [
+                86.789352,
+                27.922659
+              ],
+              [
+                86.461975,
+                29.603413
+              ],
+              [
+                83.911606,
+                29.200054
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -21.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "198ae7db-2638-4326-b855-1895966d796f",
+      "name": "S1D_IW_GRDH_1SDV_20260804T122140_20260804T122205_003976_00737A_38EB_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260804T122140_20260804T122205_003976_00737A_6F58.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-08-04T12:21:40.493161Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260804T122140_20260804T122205_003976_00737A_38EB_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-04T12:21:40.493161Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.923973,
+                29.11241
+              ],
+              [
+                84.17672,
+                27.591496
+              ],
+              [
+                86.749039,
+                28.008644
+              ],
+              [
+                86.532402,
+                29.524977
+              ],
+              [
+                83.923973,
+                29.11241
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -21.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260804T122140_20260804T122205_003976_00737A_6F58.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "da58ab9d-37b4-4d6b-b990-65c5888deba1",
+      "name": "S1D_IW_GRDH_1SDV_20260804T122140_20260804T122205_003976_00737A_6F58.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-08-04T12:21:40.493161Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260804T122140_20260804T122205_003976_00737A_6F58.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-04T12:21:40.493161Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.923973,
+                29.11241
+              ],
+              [
+                84.17672,
+                27.591496
+              ],
+              [
+                86.749039,
+                28.008644
+              ],
+              [
+                86.532402,
+                29.524977
+              ],
+              [
+                83.923973,
+                29.11241
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -21.485,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-A085-20260804T122140",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "1a9f4db7-8c20-4374-9d82-8d8608610dfd",
+      "name": "S1D_IW_SLC__1SDV_20260807T001035_20260807T001102_004012_0074B7_29BF.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-07T00:10:35.578320Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260807T001035_20260807T001102_004012_0074B7_29BF.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-07T00:10:35.578320Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.697403,
+                27.014534
+              ],
+              [
+                88.05294,
+                28.640789
+              ],
+              [
+                85.525078,
+                29.043888
+              ],
+              [
+                85.209137,
+                27.420418
+              ],
+              [
+                87.697403,
+                27.014534
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -18.993,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "890f4dd4-df21-4e78-b129-38627cefa6bb",
+      "name": "S1D_IW_GRDH_1SDV_20260807T001036_20260807T001101_004012_0074B7_3F2D.SAFE",
+      "status": "rejected_coverage",
+      "reason": "pass covers 35.4% of the AOI (scene alone 35.4%); minimum 80%",
+      "sensing_start": "2026-08-07T00:10:36.458291Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260807T001036_20260807T001101_004012_0074B7_3F2D.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-07T00:10:36.458291Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.767586,
+                27.070305
+              ],
+              [
+                88.03933,
+                28.588051
+              ],
+              [
+                85.468025,
+                28.997894
+              ],
+              [
+                85.231194,
+                27.484299
+              ],
+              [
+                87.767586,
+                27.070305
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -18.993,
+      "scene_coverage": 0.3543,
+      "pass_id": "S1D-D121-20260807T001036",
+      "pass_coverage": 0.3543,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "e9553154-8eee-42b3-b6f7-fa59c9d42052",
+      "name": "S1D_IW_GRDH_1SDV_20260807T001036_20260807T001101_004012_0074B7_C5EC_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260807T001036_20260807T001101_004012_0074B7_3F2D.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-08-07T00:10:36.458291Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260807T001036_20260807T001101_004012_0074B7_C5EC_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-07T00:10:36.458291Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.767586,
+                27.070305
+              ],
+              [
+                88.03933,
+                28.588051
+              ],
+              [
+                85.468025,
+                28.997894
+              ],
+              [
+                85.231194,
+                27.484299
+              ],
+              [
+                87.767586,
+                27.070305
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -18.993,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260807T001036_20260807T001101_004012_0074B7_3F2D.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "47548d12-7925-4e03-a3f7-fd680a9244d2",
+      "name": "S1D_IW_RAW__0SDV_20260812T001840_20260812T001912_004085_007738_B558.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-12T00:18:40.319145Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260812T001840_20260812T001912_004085_007738_B558.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-12T00:18:40.319145Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.7745,
+                29.26
+              ],
+              [
+                83.3945,
+                27.3023
+              ],
+              [
+                85.8543,
+                27.0327
+              ],
+              [
+                86.2807,
+                28.9912
+              ],
+              [
+                83.7745,
+                29.26
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -13.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "b54ef676-1b50-4739-93e8-874e0e0ec5ea",
+      "name": "S1D_IW_SLC__1SDV_20260812T001843_20260812T001910_004085_007738_6C82.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-12T00:18:43.143966Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260812T001843_20260812T001910_004085_007738_6C82.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-12T00:18:43.143966Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.726593,
+                27.40637
+              ],
+              [
+                86.083176,
+                29.032331
+              ],
+              [
+                83.543892,
+                29.43498
+              ],
+              [
+                83.227715,
+                27.81176
+              ],
+              [
+                85.726593,
+                27.40637
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -13.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "d2be3c9d-35bd-46f4-b5fd-1dba0de424dc",
+      "name": "S1D_IW_GRDH_1SDV_20260812T001844_20260812T001909_004085_007738_F2A0.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-08-12T00:18:44.017122Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260812T001844_20260812T001909_004085_007738_F2A0.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-12T00:18:44.017122Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.807976,
+                27.460579
+              ],
+              [
+                86.068733,
+                28.980158
+              ],
+              [
+                83.486259,
+                29.389448
+              ],
+              [
+                83.260849,
+                27.874279
+              ],
+              [
+                85.807976,
+                27.460579
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -13.987,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-D019-20260812T001844",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "57b147dc-1952-420e-b96c-5b835f2af393",
+      "name": "S1D_IW_GRDH_1SDV_20260812T001844_20260812T001909_004085_007738_F79E_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260812T001844_20260812T001909_004085_007738_F2A0.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-08-12T00:18:44.017122Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260812T001844_20260812T001909_004085_007738_F79E_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-12T00:18:44.017122Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.807976,
+                27.460579
+              ],
+              [
+                86.068733,
+                28.980158
+              ],
+              [
+                83.486259,
+                29.389448
+              ],
+              [
+                83.260849,
+                27.874279
+              ],
+              [
+                85.807976,
+                27.460579
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -13.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260812T001844_20260812T001909_004085_007738_F2A0.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "64f6259b-7eb0-493f-b375-201b34356e25",
+      "name": "S1D_IW_RAW__0SDV_20260816T122137_20260816T122209_004151_007980_AA7D.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-16T12:21:37.359734Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260816T122137_20260816T122209_004151_007980_AA7D.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-16T12:21:37.359734Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                86.6061,
+                27.436
+              ],
+              [
+                86.226,
+                29.3936
+              ],
+              [
+                83.7159,
+                29.1248
+              ],
+              [
+                84.1427,
+                27.1664
+              ],
+              [
+                86.6061,
+                27.436
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -9.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "496369df-baf1-4f5e-a3d5-4ed92c459201",
+      "name": "S1D_IW_SLC__1SDV_20260816T122139_20260816T122207_004151_007980_0444.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-16T12:21:39.573377Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260816T122139_20260816T122207_004151_007980_0444.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-16T12:21:39.573377Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.912025,
+                29.200066
+              ],
+              [
+                84.281647,
+                27.516468
+              ],
+              [
+                86.789742,
+                27.922636
+              ],
+              [
+                86.462395,
+                29.603394
+              ],
+              [
+                83.912025,
+                29.200066
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -9.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "04db2c11-1319-4808-adaa-da7f7ccbbd4f",
+      "name": "S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_B091_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_C3AB.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-08-16T12:21:41.058298Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_B091_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-16T12:21:41.058298Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.9244,
+                29.112411
+              ],
+              [
+                84.177124,
+                27.591494
+              ],
+              [
+                86.749352,
+                28.008602
+              ],
+              [
+                86.532738,
+                29.524935
+              ],
+              [
+                83.9244,
+                29.112411
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -9.485,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_C3AB.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "844b9a32-9aa2-4611-83f6-ae6501c01955",
+      "name": "S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_C3AB.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-08-16T12:21:41.058298Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_C3AB.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-16T12:21:41.058298Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.9244,
+                29.112411
+              ],
+              [
+                84.177124,
+                27.591494
+              ],
+              [
+                86.749352,
+                28.008602
+              ],
+              [
+                86.532738,
+                29.524935
+              ],
+              [
+                83.9244,
+                29.112411
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -9.485,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-A085-20260816T122141",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "c2f0fc70-5f41-484f-890f-01a2398edb28",
+      "name": "S1D_IW_SLC__1SDV_20260819T001036_20260819T001102_004187_007ABD_A244.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-19T00:10:36.012171Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260819T001036_20260819T001102_004187_007ABD_A244.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-19T00:10:36.012171Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.698105,
+                27.014376
+              ],
+              [
+                88.053665,
+                28.640635
+              ],
+              [
+                85.525925,
+                29.043745
+              ],
+              [
+                85.209953,
+                27.420269
+              ],
+              [
+                87.698105,
+                27.014376
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -6.993,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "f602b1b7-1ed0-417d-91e7-27991b733982",
+      "name": "S1D_IW_GRDH_1SDV_20260819T001036_20260819T001101_004187_007ABD_B38C_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260819T001036_20260819T001101_004187_007ABD_DC16.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-08-19T00:10:36.889384Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260819T001036_20260819T001101_004187_007ABD_B38C_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-19T00:10:36.889384Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.76828,
+                27.070326
+              ],
+              [
+                88.040062,
+                28.588068
+              ],
+              [
+                85.468857,
+                28.997923
+              ],
+              [
+                85.232002,
+                27.484329
+              ],
+              [
+                87.76828,
+                27.070326
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -6.993,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260819T001036_20260819T001101_004187_007ABD_DC16.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "f2682536-f9b8-4b5b-b9eb-5b52417820fa",
+      "name": "S1D_IW_GRDH_1SDV_20260819T001036_20260819T001101_004187_007ABD_DC16.SAFE",
+      "status": "rejected_coverage",
+      "reason": "pass covers 35.1% of the AOI (scene alone 35.1%); minimum 80%",
+      "sensing_start": "2026-08-19T00:10:36.889384Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260819T001036_20260819T001101_004187_007ABD_DC16.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-19T00:10:36.889384Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.76828,
+                27.070326
+              ],
+              [
+                88.040062,
+                28.588068
+              ],
+              [
+                85.468857,
+                28.997923
+              ],
+              [
+                85.232002,
+                27.484329
+              ],
+              [
+                87.76828,
+                27.070326
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -6.993,
+      "scene_coverage": 0.351,
+      "pass_id": "S1D-D121-20260819T001036",
+      "pass_coverage": 0.351,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "2c2f7028-0214-47e6-a673-b9c17320f26f",
+      "name": "S1D_IW_RAW__0SDV_20260824T001840_20260824T001913_004260_007D5D_559E.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-24T00:18:40.857155Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260824T001840_20260824T001913_004260_007D5D_559E.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-24T00:18:40.857155Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.7753,
+                29.2602
+              ],
+              [
+                83.3952,
+                27.3025
+              ],
+              [
+                85.855,
+                27.0328
+              ],
+              [
+                86.2815,
+                28.9913
+              ],
+              [
+                83.7753,
+                29.2602
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -1.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "6af2a9c1-62f8-47dc-9481-30f0295e9e1b",
+      "name": "S1D_IW_SLC__1SDV_20260824T001843_20260824T001910_004260_007D5D_98CC.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-24T00:18:43.681977Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260824T001843_20260824T001910_004260_007D5D_98CC.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-24T00:18:43.681977Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.727516,
+                27.406324
+              ],
+              [
+                86.084152,
+                29.032276
+              ],
+              [
+                83.544838,
+                29.435003
+              ],
+              [
+                83.228607,
+                27.811792
+              ],
+              [
+                85.727516,
+                27.406324
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -1.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "3df84569-b24e-4020-9fbc-480ed1d9e42f",
+      "name": "S1D_IW_GRDH_1SDV_20260824T001844_20260824T001909_004260_007D5D_45FC_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260824T001844_20260824T001909_004260_007D5D_EDEC.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-08-24T00:18:44.555468Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260824T001844_20260824T001909_004260_007D5D_45FC_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-24T00:18:44.555468Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.808884,
+                27.46051
+              ],
+              [
+                86.069786,
+                28.98007
+              ],
+              [
+                83.487213,
+                29.389452
+              ],
+              [
+                83.261673,
+                27.874296
+              ],
+              [
+                85.808884,
+                27.46051
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": -1.987,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260824T001844_20260824T001909_004260_007D5D_EDEC.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "be06e5d4-0eac-40af-954c-b4c7140c52c7",
+      "name": "S1D_IW_GRDH_1SDV_20260824T001844_20260824T001909_004260_007D5D_EDEC.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-08-24T00:18:44.555468Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260824T001844_20260824T001909_004260_007D5D_EDEC.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-24T00:18:44.555468Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.808884,
+                27.46051
+              ],
+              [
+                86.069786,
+                28.98007
+              ],
+              [
+                83.487213,
+                29.389452
+              ],
+              [
+                83.261673,
+                27.874296
+              ],
+              [
+                85.808884,
+                27.46051
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "pre_event",
+      "days_from_event": -1.987,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-D019-20260824T001844",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "ba9039c5-c1e9-4434-971e-d2a0896b77c0",
+      "name": "S1D_IW_RAW__0SDV_20260828T122138_20260828T122210_004326_007FA4_EFD9.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-28T12:21:38.063759Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260828T122138_20260828T122210_004326_007FA4_EFD9.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-28T12:21:38.063759Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                86.6061,
+                27.4361
+              ],
+              [
+                86.226,
+                29.3936
+              ],
+              [
+                83.7159,
+                29.1249
+              ],
+              [
+                84.1427,
+                27.1665
+              ],
+              [
+                86.6061,
+                27.4361
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 2.515,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "890e7675-61a3-4c85-87ec-4d3446bf2d61",
+      "name": "S1D_IW_SLC__1SDV_20260828T122140_20260828T122208_004326_007FA4_93F8.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-28T12:21:40.281512Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260828T122140_20260828T122208_004326_007FA4_93F8.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-28T12:21:40.281512Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.912247,
+                29.20027
+              ],
+              [
+                84.281815,
+                27.51679
+              ],
+              [
+                86.789871,
+                27.922911
+              ],
+              [
+                86.462578,
+                29.603552
+              ],
+              [
+                83.912247,
+                29.20027
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 2.515,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "9cb3c885-cfb8-40cc-a44a-8673e772c794",
+      "name": "S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_01B4.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-08-28T12:21:41.762029Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_01B4.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-28T12:21:41.762029Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.924644,
+                29.112471
+              ],
+              [
+                84.177353,
+                27.591553
+              ],
+              [
+                86.749588,
+                28.008621
+              ],
+              [
+                86.532997,
+                29.524954
+              ],
+              [
+                83.924644,
+                29.112471
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "post_event",
+      "days_from_event": 2.515,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-A085-20260828T122141",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "9e6c24a1-24ca-419f-bcec-db66791dcf19",
+      "name": "S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_C73B_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_01B4.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-08-28T12:21:41.762029Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_C73B_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-28T12:21:41.762029Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.924644,
+                29.112471
+              ],
+              [
+                84.177353,
+                27.591553
+              ],
+              [
+                86.749588,
+                28.008621
+              ],
+              [
+                86.532997,
+                29.524954
+              ],
+              [
+                83.924644,
+                29.112471
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 2.515,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_01B4.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "b320fc49-cd99-4037-bd16-5d244cb4e351",
+      "name": "S1D_IW_SLC__1SDV_20260831T001036_20260831T001103_004362_0080EC_F814.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-08-31T00:10:36.770941Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260831T001036_20260831T001103_004362_0080EC_F814.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-31T00:10:36.770941Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.697395,
+                27.014256
+              ],
+              [
+                88.052925,
+                28.640509
+              ],
+              [
+                85.525009,
+                29.043604
+              ],
+              [
+                85.209076,
+                27.420135
+              ],
+              [
+                87.697395,
+                27.014256
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 5.007,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "36b14dd0-2f5e-459c-bac0-0fb5eb2cccf4",
+      "name": "S1D_IW_GRDH_1SDV_20260831T001037_20260831T001102_004362_0080EC_2C5B.SAFE",
+      "status": "rejected_coverage",
+      "reason": "pass covers 35.5% of the AOI (scene alone 35.5%); minimum 80%",
+      "sensing_start": "2026-08-31T00:10:37.647071Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260831T001037_20260831T001102_004362_0080EC_2C5B.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-31T00:10:37.647071Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.767586,
+                27.070356
+              ],
+              [
+                88.039307,
+                28.588013
+              ],
+              [
+                85.467896,
+                28.997856
+              ],
+              [
+                85.231094,
+                27.48435
+              ],
+              [
+                87.767586,
+                27.070356
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "post_event",
+      "days_from_event": 5.007,
+      "scene_coverage": 0.3547,
+      "pass_id": "S1D-D121-20260831T001037",
+      "pass_coverage": 0.3547,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "e9713b54-de96-4bb1-a3f9-079c9660a442",
+      "name": "S1D_IW_GRDH_1SDV_20260831T001037_20260831T001102_004362_0080EC_65B9_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260831T001037_20260831T001102_004362_0080EC_2C5B.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-08-31T00:10:37.647071Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260831T001037_20260831T001102_004362_0080EC_65B9_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-08-31T00:10:37.647071Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.767586,
+                27.070356
+              ],
+              [
+                88.039307,
+                28.588013
+              ],
+              [
+                85.467896,
+                28.997856
+              ],
+              [
+                85.231094,
+                27.48435
+              ],
+              [
+                87.767586,
+                27.070356
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 5.007,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260831T001037_20260831T001102_004362_0080EC_2C5B.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "7d82c3b2-4ffe-4646-b248-1c818f463960",
+      "name": "S1D_IW_RAW__0SDV_20260905T001841_20260905T001913_004435_00837B_216C.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-09-05T00:18:41.133125Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260905T001841_20260905T001913_004435_00837B_216C.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-05T00:18:41.133125Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.7757,
+                29.2601
+              ],
+              [
+                83.3956,
+                27.3024
+              ],
+              [
+                85.8555,
+                27.0327
+              ],
+              [
+                86.2819,
+                28.9912
+              ],
+              [
+                83.7757,
+                29.2601
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 10.013,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "0c58b900-ef94-41b4-a700-c610e805b6bd",
+      "name": "S1D_IW_SLC__1SDV_20260905T001843_20260905T001910_004435_00837B_F6E1.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-09-05T00:18:43.962059Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260905T001843_20260905T001910_004435_00837B_F6E1.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-05T00:18:43.962059Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.727898,
+                27.405977
+              ],
+              [
+                86.084564,
+                29.032051
+              ],
+              [
+                83.545288,
+                29.434778
+              ],
+              [
+                83.229027,
+                27.811445
+              ],
+              [
+                85.727898,
+                27.405977
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 10.013,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "7f4ba72c-7460-41b9-9b20-30e3ce134335",
+      "name": "S1D_IW_GRDH_1SDV_20260905T001844_20260905T001909_004435_00837B_2F0C.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-09-05T00:18:44.831563Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260905T001844_20260905T001909_004435_00837B_2F0C.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-05T00:18:44.831563Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.809448,
+                27.460508
+              ],
+              [
+                86.070343,
+                28.98007
+              ],
+              [
+                83.48777,
+                29.389458
+              ],
+              [
+                83.262238,
+                27.8743
+              ],
+              [
+                85.809448,
+                27.460508
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "post_event",
+      "days_from_event": 10.013,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-D019-20260905T001844",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "48bf438d-31c8-4e57-970c-ac6bc4514414",
+      "name": "S1D_IW_GRDH_1SDV_20260905T001844_20260905T001909_004435_00837B_60FD_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260905T001844_20260905T001909_004435_00837B_2F0C.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-09-05T00:18:44.831563Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260905T001844_20260905T001909_004435_00837B_60FD_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-05T00:18:44.831563Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.809448,
+                27.460508
+              ],
+              [
+                86.070343,
+                28.98007
+              ],
+              [
+                83.48777,
+                29.389458
+              ],
+              [
+                83.262238,
+                27.8743
+              ],
+              [
+                85.809448,
+                27.460508
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 10.013,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260905T001844_20260905T001909_004435_00837B_2F0C.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "2d4c6b76-fbdc-4294-9379-3141b5b7e50c",
+      "name": "S1D_IW_RAW__0SDV_20260909T122138_20260909T122210_004501_0085C5_421C.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-09-09T12:21:38.269310Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260909T122138_20260909T122210_004501_0085C5_421C.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-09T12:21:38.269310Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                86.6069,
+                27.436
+              ],
+              [
+                86.2268,
+                29.3936
+              ],
+              [
+                83.7167,
+                29.1248
+              ],
+              [
+                84.1435,
+                27.1664
+              ],
+              [
+                86.6069,
+                27.436
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 14.515,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "9678f0a0-075c-4dfa-918c-2fe04133ee76",
+      "name": "S1D_IW_SLC__1SDV_20260909T122140_20260909T122208_004501_0085C5_B90B.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-09-09T12:21:40.487062Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260909T122140_20260909T122208_004501_0085C5_B90B.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-09T12:21:40.487062Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.912704,
+                29.200514
+              ],
+              [
+                84.282341,
+                27.516794
+              ],
+              [
+                86.790466,
+                27.922937
+              ],
+              [
+                86.463112,
+                29.603819
+              ],
+              [
+                83.912704,
+                29.200514
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 14.515,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "ec03c5a1-516a-447c-a30b-26159a10e47a",
+      "name": "S1D_IW_GRDH_1SDV_20260909T122141_20260909T122206_004501_0085C5_10A0.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-09-09T12:21:41.967975Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260909T122141_20260909T122206_004501_0085C5_10A0.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-09T12:21:41.967975Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.925163,
+                29.112499
+              ],
+              [
+                84.177879,
+                27.591581
+              ],
+              [
+                86.750214,
+                28.008675
+              ],
+              [
+                86.533615,
+                29.525007
+              ],
+              [
+                83.925163,
+                29.112499
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "post_event",
+      "days_from_event": 14.515,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-A085-20260909T122141",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "db017667-e895-4586-a3d1-c019a5ef43a7",
+      "name": "S1D_IW_GRDH_1SDV_20260909T122141_20260909T122206_004501_0085C5_3DCC_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260909T122141_20260909T122206_004501_0085C5_10A0.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-09-09T12:21:41.967975Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260909T122141_20260909T122206_004501_0085C5_3DCC_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-09T12:21:41.967975Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "ascending",
+        "relative_orbit": 85,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.925163,
+                29.112499
+              ],
+              [
+                84.177879,
+                27.591581
+              ],
+              [
+                86.750214,
+                28.008675
+              ],
+              [
+                86.533615,
+                29.525007
+              ],
+              [
+                83.925163,
+                29.112499
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 14.515,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260909T122141_20260909T122206_004501_0085C5_10A0.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "5dcfaad8-9e23-44ed-95f9-65b9e433f0f5",
+      "name": "S1D_IW_SLC__1SDV_20260912T001037_20260912T001104_004537_008704_59EC.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-09-12T00:10:37.204292Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260912T001037_20260912T001104_004537_008704_59EC.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-12T00:10:37.204292Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.69722,
+                27.014114
+              ],
+              [
+                88.052765,
+                28.640488
+              ],
+              [
+                85.524773,
+                29.043575
+              ],
+              [
+                85.208832,
+                27.419985
+              ],
+              [
+                87.69722,
+                27.014114
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 17.007,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "570a95de-7fa1-4ef8-9fd1-37b0aae9eed2",
+      "name": "S1D_IW_GRDH_1SDV_20260912T001038_20260912T001103_004537_008704_48CA_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260912T001038_20260912T001103_004537_008704_4E96.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-09-12T00:10:38.079272Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260912T001038_20260912T001103_004537_008704_48CA_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-12T00:10:38.079272Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.767418,
+                27.070316
+              ],
+              [
+                88.039146,
+                28.588064
+              ],
+              [
+                85.467628,
+                28.997904
+              ],
+              [
+                85.230827,
+                27.484306
+              ],
+              [
+                87.767418,
+                27.070316
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 17.007,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260912T001038_20260912T001103_004537_008704_4E96.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "947680e8-6777-4089-8832-748d4dea744c",
+      "name": "S1D_IW_GRDH_1SDV_20260912T001038_20260912T001103_004537_008704_4E96.SAFE",
+      "status": "rejected_coverage",
+      "reason": "pass covers 35.6% of the AOI (scene alone 35.6%); minimum 80%",
+      "sensing_start": "2026-09-12T00:10:38.079272Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260912T001038_20260912T001103_004537_008704_4E96.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-12T00:10:38.079272Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 121,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                87.767418,
+                27.070316
+              ],
+              [
+                88.039146,
+                28.588064
+              ],
+              [
+                85.467628,
+                28.997904
+              ],
+              [
+                85.230827,
+                27.484306
+              ],
+              [
+                87.767418,
+                27.070316
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "post_event",
+      "days_from_event": 17.007,
+      "scene_coverage": 0.3558,
+      "pass_id": "S1D-D121-20260912T001038",
+      "pass_coverage": 0.3558,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "abc806eb-7215-4f78-817d-473c86576ece",
+      "name": "S1D_IW_RAW__0SDV_20260917T001841_20260917T001914_004610_008985_9946.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_RAW__0S, required IW_GRDH_1S",
+      "sensing_start": "2026-09-17T00:18:41.718742Z",
+      "acquisition": {
+        "source_id": "S1D_IW_RAW__0SDV_20260917T001841_20260917T001914_004610_008985_9946.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-17T00:18:41.718742Z",
+        "product_type": "IW_RAW__0S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                83.7744,
+                29.26
+              ],
+              [
+                83.3944,
+                27.3023
+              ],
+              [
+                85.8542,
+                27.0326
+              ],
+              [
+                86.2807,
+                28.9912
+              ],
+              [
+                83.7744,
+                29.26
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 22.013,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "f52de63b-885b-4b89-86e5-1a374e7a37e0",
+      "name": "S1D_IW_SLC__1SDV_20260917T001844_20260917T001911_004610_008985_8007.SAFE",
+      "status": "rejected_product_type",
+      "reason": "product type IW_SLC__1S, required IW_GRDH_1S",
+      "sensing_start": "2026-09-17T00:18:44.547677Z",
+      "acquisition": {
+        "source_id": "S1D_IW_SLC__1SDV_20260917T001844_20260917T001911_004610_008985_8007.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-17T00:18:44.547677Z",
+        "product_type": "IW_SLC__1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.726784,
+                27.406063
+              ],
+              [
+                86.08342,
+                29.032015
+              ],
+              [
+                83.544075,
+                29.43474
+              ],
+              [
+                83.227844,
+                27.811529
+              ],
+              [
+                85.726784,
+                27.406063
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 22.013,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "c8e6cd2d-7014-4a8b-b10c-7e540cc55b9f",
+      "name": "S1D_IW_GRDH_1SDV_20260917T001845_20260917T001910_004610_008985_0F7D_COG.SAFE",
+      "status": "rejected_duplicate",
+      "reason": "same acquisition as S1D_IW_GRDH_1SDV_20260917T001845_20260917T001910_004610_008985_92D6.SAFE (kept by preference: non-COG, latest publication, smallest id)",
+      "sensing_start": "2026-09-17T00:18:45.417100Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260917T001845_20260917T001910_004610_008985_0F7D_COG.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-17T00:18:45.417100Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.808113,
+                27.46051
+              ],
+              [
+                86.068893,
+                28.980091
+              ],
+              [
+                83.486328,
+                29.389458
+              ],
+              [
+                83.260895,
+                27.874287
+              ],
+              [
+                85.808113,
+                27.46051
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": null,
+      "days_from_event": 22.013,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": "S1D_IW_GRDH_1SDV_20260917T001845_20260917T001910_004610_008985_92D6.SAFE",
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "1e85e42f-a4aa-4430-8d82-d01848a0b134",
+      "name": "S1D_IW_GRDH_1SDV_20260917T001845_20260917T001910_004610_008985_92D6.SAFE",
+      "status": "accepted",
+      "reason": "pass covers 100.0% of the AOI",
+      "sensing_start": "2026-09-17T00:18:45.417100Z",
+      "acquisition": {
+        "source_id": "S1D_IW_GRDH_1SDV_20260917T001845_20260917T001910_004610_008985_92D6.SAFE",
+        "sensor": "sentinel-1",
+        "platform": "S1D",
+        "acquisition_start": "2026-09-17T00:18:45.417100Z",
+        "product_type": "IW_GRDH_1S",
+        "orbit_direction": "descending",
+        "relative_orbit": 19,
+        "polarizations": [
+          "VH",
+          "VV"
+        ],
+        "cloud_cover_pct": null,
+        "footprint": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                85.808113,
+                27.46051
+              ],
+              [
+                86.068893,
+                28.980091
+              ],
+              [
+                83.486328,
+                29.389458
+              ],
+              [
+                83.260895,
+                27.874287
+              ],
+              [
+                85.808113,
+                27.46051
+              ]
+            ]
+          ]
+        },
+        "processing_status": "catalogued"
+      },
+      "role": "post_event",
+      "days_from_event": 22.013,
+      "scene_coverage": 1.0,
+      "pass_id": "S1D-D019-20260917T001845",
+      "pass_coverage": 1.0,
+      "duplicate_of": null,
+      "metadata_sources": {
+        "platform": "attribute",
+        "mode": "attribute",
+        "product_type": "attribute",
+        "polarizations": "attribute",
+        "orbit_direction": "attribute",
+        "relative_orbit": "attribute"
+      }
+    },
+    {
+      "product_id": "04609932-e16f-4894-b592-a4ebb5c2f577",
+      "name": "S1D_IW_ETA__AXDV_20260629T122136_20260629T122204_003451_006174_5792.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260629T122136_20260629T122204_003451_006174_5792.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "306a51b0-ae96-4995-8125-79536ca5473d",
+      "name": "S1D_IW_ETA__AXDV_20260702T001033_20260702T001100_003487_0062AB_F490.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260702T001033_20260702T001100_003487_0062AB_F490.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "659fc334-829e-4499-9f55-790d5ebd1520",
+      "name": "S1D_IW_ETA__AXDV_20260707T001841_20260707T001908_003560_006530_89AA.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260707T001841_20260707T001908_003560_006530_89AA.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "5b85045b-e9d0-4fc7-9b1a-68bc3180871f",
+      "name": "S1D_IW_ETA__AXDV_20260711T122137_20260711T122205_003626_00675A_B865.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260711T122137_20260711T122205_003626_00675A_B865.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "b8b6e6ab-e472-4635-b226-f58dba7bfcda",
+      "name": "S1D_IW_ETA__AXDV_20260714T001034_20260714T001101_003662_00689F_15BD.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260714T001034_20260714T001101_003662_00689F_15BD.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "adb0fc30-11b4-4a87-915a-1bd1ce0adf41",
+      "name": "S1D_IW_ETA__AXDV_20260719T001841_20260719T001909_003735_006B26_E7F0.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260719T001841_20260719T001909_003735_006B26_E7F0.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "02ceb84c-4e87-44bc-96ba-7a827a4bc545",
+      "name": "S1D_IW_ETA__AXDV_20260723T122138_20260723T122206_003801_006D5D_BB16.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260723T122138_20260723T122206_003801_006D5D_BB16.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "f1b1ad8e-e8e8-4bfb-886b-882ad486c92d",
+      "name": "S1D_IW_ETA__AXDV_20260726T001035_20260726T001102_003837_006EA0_1B66.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260726T001035_20260726T001102_003837_006EA0_1B66.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "69caa7f1-9ac9-4b5f-a1ad-01adea91f36d",
+      "name": "S1D_IW_ETA__AXDV_20260731T001842_20260731T001909_003910_007127_7C38.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260731T001842_20260731T001909_003910_007127_7C38.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "af002ba8-d07b-46c5-89e8-1b24729ac301",
+      "name": "S1D_IW_ETA__AXDV_20260804T122138_20260804T122206_003976_00737A_613B.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260804T122138_20260804T122206_003976_00737A_613B.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "95a2cb6c-7de4-43d8-9c25-e2f87f989376",
+      "name": "S1D_IW_ETA__AXDV_20260807T001035_20260807T001102_004012_0074B7_D0B5.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260807T001035_20260807T001102_004012_0074B7_D0B5.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "f22b5da0-c82b-45fa-92e5-3e8bc4f4f076",
+      "name": "S1D_IW_ETA__AXDV_20260812T001843_20260812T001910_004085_007738_F294.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260812T001843_20260812T001910_004085_007738_F294.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "1d098596-9a34-4705-bf3e-26ac093d22d4",
+      "name": "S1D_IW_ETA__AXDV_20260816T122139_20260816T122207_004151_007980_5E69.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260816T122139_20260816T122207_004151_007980_5E69.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "a2cd085e-0fcc-4eef-9478-014f2f4bf420",
+      "name": "S1D_IW_ETA__AXDV_20260819T001035_20260819T001103_004187_007ABD_A168.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260819T001035_20260819T001103_004187_007ABD_A168.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "1532445f-8819-483b-b3c4-7be76133f4f6",
+      "name": "S1D_IW_ETA__AXDV_20260824T001843_20260824T001910_004260_007D5D_4C9B.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260824T001843_20260824T001910_004260_007D5D_4C9B.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "60d813f9-a946-49b4-a1b1-2d3a0811acb7",
+      "name": "S1D_IW_ETA__AXDV_20260828T122140_20260828T122208_004326_007FA4_F07A.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260828T122140_20260828T122208_004326_007FA4_F07A.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "9c9d681c-a03d-42fa-95c2-67f5b0fcef48",
+      "name": "S1D_IW_ETA__AXDV_20260831T001036_20260831T001103_004362_0080EC_E4FE.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260831T001036_20260831T001103_004362_0080EC_E4FE.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "c62a7c9c-30f5-4e43-b8e9-afa3d5c6c81c",
+      "name": "S1D_IW_ETA__AXDV_20260905T001843_20260905T001910_004435_00837B_6D98.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260905T001843_20260905T001910_004435_00837B_6D98.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "0b56e437-1181-4fbb-aff3-0b22523cc28c",
+      "name": "S1D_IW_ETA__AXDV_20260909T122140_20260909T122208_004501_0085C5_66CC.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260909T122140_20260909T122208_004501_0085C5_66CC.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "3fe26657-b816-414c-a1b9-0f98cf65a437",
+      "name": "S1D_IW_ETA__AXDV_20260912T001037_20260912T001104_004537_008704_C921.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260912T001037_20260912T001104_004537_008704_C921.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    },
+    {
+      "product_id": "9b13795f-54f8-4c0b-829b-a7714a002ad9",
+      "name": "S1D_IW_ETA__AXDV_20260917T001844_20260917T001911_004610_008985_C0AE.SAFE",
+      "status": "rejected_invalid_metadata",
+      "reason": "product name does not follow the Sentinel-1 naming convention: 'S1D_IW_ETA__AXDV_20260917T001844_20260917T001911_004610_008985_C0AE.SAFE'",
+      "sensing_start": null,
+      "acquisition": null,
+      "role": null,
+      "days_from_event": null,
+      "scene_coverage": null,
+      "pass_id": null,
+      "pass_coverage": null,
+      "duplicate_of": null,
+      "metadata_sources": {}
+    }
+  ],
+  "groups": [
+    {
+      "orbit_direction": "ascending",
+      "relative_orbit": 85,
+      "pre_event": [
+        "S1D_IW_GRDH_1SDV_20260629T122138_20260629T122203_003451_006174_F84B.SAFE",
+        "S1D_IW_GRDH_1SDV_20260711T122139_20260711T122204_003626_00675A_805D.SAFE",
+        "S1D_IW_GRDH_1SDV_20260723T122140_20260723T122205_003801_006D5D_CDAA.SAFE",
+        "S1D_IW_GRDH_1SDV_20260804T122140_20260804T122205_003976_00737A_6F58.SAFE",
+        "S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_C3AB.SAFE"
+      ],
+      "post_event": [
+        "S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_01B4.SAFE",
+        "S1D_IW_GRDH_1SDV_20260909T122141_20260909T122206_004501_0085C5_10A0.SAFE"
+      ],
+      "pass_ids": [
+        "S1D-A085-20260629T122138",
+        "S1D-A085-20260711T122139",
+        "S1D-A085-20260723T122140",
+        "S1D-A085-20260804T122140",
+        "S1D-A085-20260816T122141",
+        "S1D-A085-20260828T122141",
+        "S1D-A085-20260909T122141"
+      ],
+      "has_pre_and_post": true
+    },
+    {
+      "orbit_direction": "descending",
+      "relative_orbit": 19,
+      "pre_event": [
+        "S1D_IW_GRDH_1SDV_20260707T001841_20260707T001906_003560_006530_3F50.SAFE",
+        "S1D_IW_GRDH_1SDV_20260719T001842_20260719T001907_003735_006B26_3BF9.SAFE",
+        "S1D_IW_GRDH_1SDV_20260731T001843_20260731T001908_003910_007127_A008.SAFE",
+        "S1D_IW_GRDH_1SDV_20260812T001844_20260812T001909_004085_007738_F2A0.SAFE",
+        "S1D_IW_GRDH_1SDV_20260824T001844_20260824T001909_004260_007D5D_EDEC.SAFE"
+      ],
+      "post_event": [
+        "S1D_IW_GRDH_1SDV_20260905T001844_20260905T001909_004435_00837B_2F0C.SAFE",
+        "S1D_IW_GRDH_1SDV_20260917T001845_20260917T001910_004610_008985_92D6.SAFE"
+      ],
+      "pass_ids": [
+        "S1D-D019-20260707T001841",
+        "S1D-D019-20260719T001842",
+        "S1D-D019-20260731T001843",
+        "S1D-D019-20260812T001844",
+        "S1D-D019-20260824T001844",
+        "S1D-D019-20260905T001844",
+        "S1D-D019-20260917T001845"
+      ],
+      "has_pre_and_post": true
+    }
+  ]
+}

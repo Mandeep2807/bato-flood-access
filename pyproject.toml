@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bato"
+version = "0.1.0"
+description = "BATO - satellite road-access intelligence (hackathon prototype; foundation milestone)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+# Foundation milestone only. The geospatial stack (rasterio, shapely, pyproj,
+# geopandas, networkx, torch, ...) is added in the milestone that first uses it.
+dependencies = [
+    "pydantic>=2.6,<3",
+    "PyYAML>=6.0",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+# Step 3.2: reading SNAP outputs for validation. SNAP itself is an external
+# program (ESA SNAP gpt), not a Python dependency.
+preprocessing = ["rasterio>=1.4"]
+# Pre-event OSM: the ohsome API v2 returns GeoParquet.
+osm = ["pyarrow>=14"]
+# Dashboard browser smoke test (tests/integration/test_dashboard_ui.py): then `playwright install chromium`.
+ui-test = ["playwright>=1.41"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bato = ["preprocessing/graphs/*.xml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["bato"]
+known-local-folder = ["helpers", "snap_fakes", "speckle_fakes", "terrain_fakes", "stack_fakes", "inference_fakes",
+                      "connectivity_fakes", "dashboard_fakes", "ems_fakes"]
+
+# rasterio (optional, Step 3.2 validation) ships without type information.
+[[tool.mypy.overrides]]
+module = ["rasterio", "rasterio.*"]
+ignore_missing_imports = true
+
+# pyarrow (optional, ohsome v2 GeoParquet) is imported lazily.
+[[tool.mypy.overrides]]
+module = ["pyarrow", "pyarrow.*"]
+ignore_missing_imports = true

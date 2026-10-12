@@ -1,0 +1,66 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Data: never publish downloaded or derived data
+data/**
+!data/**/
+!data/**/README.md
+
+# Model weights
+models/**
+!models/README.md
+
+# Generated outputs and logs
+out/**
+logs/
+connectivity_audit.txt
+evidence_audit*.json
+
+# Temporary report import
+_report_import/
+
+# Reports: publish only the final technical report and its figures
+reports/**
+!reports/README.md
+!reports/BATO_Technical_Report.md
+!reports/figures/
+reports/figures/*
+!reports/figures/fig1_architecture.png
+!reports/figures/fig1_architecture.svg
+!reports/figures/fig2_flood_state.png
+!reports/figures/fig3_access_dashboard.png
+!reports/figures/fig4_evidence_observability.png
+
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
+
+# Local investigation/debug helpers (kept locally, not part of the public release)
+audit_connectivity.py
+audit_debris_edges.py
+audit_evidence.py
+compare_exact_window.py
+compare_terrain_stack.py
+decompose_not_assessed.py
+inspect_bato_scale.py
+inspect_stage_scale.py
+make_flood_overlay.py
+make_flood_preview.py
+run_floodvit_inference.py
+step3_probe.py
