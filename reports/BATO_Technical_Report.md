@@ -21,9 +21,12 @@ We therefore made our main output an access state that carries its own uncertain
 
 BATO is a one-directional pipeline of typed stages (Figure 1): raw data → preprocessing → detection → road impact → connectivity → evidence → presentation. Run-time guards admit only Sentinel-1, Copernicus DEM and pre-event OSM as production inputs, and pipeline code cannot import the evaluation package. The dashboard is read-only: it recomputes its summary from the published files and refuses to build if anything disagrees.
 
-![](figures/fig1_architecture.svg)
+<div style="break-inside: avoid">
+
+<img src="figures/fig1_architecture.svg" alt="Figure 1 — BATO architecture" width="75%">
 
 **Figure 1.** BATO architecture. Top: the official pipeline. Grey: experiments that were not adopted. Bottom: the evaluation path, which reads the official outputs and never feeds back into the pipeline.
+</div>
 
 Two components were built but are not part of the result. **FloodViT** (a Kuro Siwo checkpoint) put 64 % of its flood pixels on slopes ≥ 30° in our scene and was trained on lowland floods, so it remains a preliminary comparison layer. **The SAR disturbance (debris) detector and road rule v2** were rejected: the detector failed pre-registered criterion (d), "no edge concentration", on a matched no-event control scene. There, 23.4 % of its detections lay in the 100-pixel border band, which holds only 6.1 % of the assessed pixels. We did not re-tune it, and BATO makes no debris claim.
 
@@ -46,10 +49,13 @@ Before the rule, gates set pixels to NOT_ASSESSED for invalid SAR, no DEM, appro
 
 **Trishuli.** Of 45,256,776 pixels, 3,970,869 were assessed and 41,285,907 (91.2 %) were not: 35,544,186 steep, 4,713,918 layover, 1,027,803 shadow, and none for invalid SAR or missing DEM. 8,341 pixels are FLOOD, a fraction of 0.00210 of the assessed area.
 
+<div style="break-inside: avoid">
 <!-- Figure 2: Trishuli flood-state map (figures/fig2_flood_state.png, 1600 × 1000 px). -->
-<img src="figures/fig2_flood_state.png" alt="Figure 2 — Trishuli flood-state map" width="75%">
+<img src="figures/fig2_flood_state.png" alt="Figure 2 — Trishuli flood-state map" width="50%">
 
 **Figure 2.** Trishuli flood-state map: Step 4C FLOOD pixels over a DEM hillshade, with not-assessed terrain hatched.
+
+</div>
 
 ## 5. Road Impact and Connectivity
 
@@ -97,12 +103,13 @@ Blocked stretches are ranked by how many settlements clearing them would reconne
 \*Share of km is our arithmetic from the published lengths.
 
 No settlement is confirmed cut off: all 164 settlements with a pre-event road still reach an anchor if unobservable roads are passable. If those roads are treated as closed, only one keeps a verified route. The other **163 settlements have access that remains unverified**, which describes what radar could confirm, not that they are isolated. The result is driven by observability far more than by detected flooding: 86 % of road length lies in terrain that Step 4C does not assess.
+<div style="break-inside: avoid">
 <!-- Figures 3 and 4, side by side: access dashboard and evidence + observability view. -->
 <img src="figures/fig3_access_dashboard.png" alt="Figure 3 — Access dashboard" width="49%"> <img src="figures/fig4_evidence_observability.png" alt="Figure 4 — Evidence + observability" width="49%">
 
 **Figure 3 (left).** Access dashboard: roads by state (red blocked, teal observed open, dashed amber unobservable), settlements by access state, network km bar. **Figure 4 (right).** Evidence + observability. Left: the evidence drawer of the top-ranked blocked stretch (PRE-1/PRE-2/POST chips, change image, Step 4C state under the road, evidence record). Right: Observability mode ("What radar can't confirm"). Building counts are labelled as a size proxy, not population.
-
-## 7. EMSR927 Evaluation
+</div>
+<h2>7. EMSR927 Evaluation</h2>
 
 EMSR927 is the Copernicus EMS Rapid Mapping activation for this event. We used it **only for evaluation**. It is stored under `data/reference/` and read only by the evaluation package; a leakage scan of all pipeline provenance must find zero hits before any metric is computed; and BATO files are hashed before and after each run.
 
@@ -111,7 +118,7 @@ We wrote the protocol `bato-emsr927-v1` before computing any metric, completed i
 The products map the event as a *Landslide*, with graded road, bridge and building damage, and contain no flood class. **Flood precision, recall, F1 and IoU are therefore NOT CALCULABLE**, and the Landslide class is never mapped to flood. Bridges are context only. Building, facility and settlement-isolation metrics are not computed, because BATO makes no such predictions.
 
 The **primary comparison** is BATO BLOCKED against EMSR927 road *Destroyed*, pooled across products. A segment takes a reference label when at least 25 m of it lies within 20 m of an EMS road line (precedence positive > excluded > negative); *Damaged* and *Possibly damaged* are excluded. *Observed-only* mode drops UNOBSERVABLE segments; *all-segments* mode counts them as not blocked.
-
+<div style="break-inside: avoid">
 **Table 3. EMSR927 primary road comparison** (matched-domain segment metrics; not network-wide recall, not "BATO accuracy")
 
 | Mode | TP | FP | FN | TN | Precision | Recall | F1 |
@@ -122,6 +129,7 @@ The **primary comparison** is BATO BLOCKED against EMSR927 road *Destroyed*, poo
 | Reference coverage | EMS positive road length 26,513.6 m; matched 23,228.9 m; unmatched 3,284.7 m; matched fraction 0.8761 |
 |---|---|
 | **Flood metrics** | **NOT CALCULABLE** (no flood class in EMSR927) |
+</div>
 
 BATO was highly conservative. Both blocked segments in the matched domain were graded Destroyed and none was graded undamaged, but a precision from two segments says little. Most reference-damaged segments were not flagged. Of the 490 matched Destroyed segments, 380 were UNOBSERVABLE, meaning BATO could not assess them under its visibility rules. The other 108 were observed but had no open-water signal, which is expected: a road buried by a debris flow need not look like water. About 88 % of the Destroyed road length lies in the matched domain. This is a one-event case study of agreement, not a validation.
 
@@ -137,7 +145,14 @@ BATO was highly conservative. Both blocked segments in the matched domain were g
 
 The README gives the full sequence: catalogue query, selection and download (`--track ASCENDING/85`) → SNAP processing and stacking → `run_baseline_detection.py` → `fetch_osm_snapshot.py` → `run_connectivity.py --road-rule v1` → `build_dashboard.py`. It needs Copernicus Data Space credentials, ESA SNAP and an `OHSOME_API_KEY` read from the environment (never written to config, provenance or logs). Outputs are published atomically and earlier ones are kept as `.superseded-*`. A repeated evaluation under the frozen protocol must reproduce the first run exactly.
 
-Population grids, JRC water, UNOSAT or EMS products as input, post-event OSM and external flood maps are never used. Attribution: "Contains modified Copernicus Sentinel data 2026"; the Copernicus WorldDEM-30 notice; "© OpenStreetMap contributors"; and the Copernicus EMS credit. The latest full test-suite run on the actual repository gave 839 passed, 11 skipped and 0 failed.
+Population grids, JRC water, UNOSAT or EMS products as input, post-event OSM and external flood maps are never used. The latest full test-suite run on the actual repository gave 876 passed, 6 skipped and 0 failed.
+
+**Attribution.**
+
+- Contains modified Copernicus Sentinel data 2026.
+- Produced using Copernicus WorldDEM-30 © DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH 2014–2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.
+- © OpenStreetMap contributors.
+- Evaluation reference only: European Union, Copernicus Emergency Management Service data (EMSR927).
 
 ## 10. Conclusion
 
