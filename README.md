@@ -13,6 +13,10 @@ Space**. The official problem statement (PS) is the source of truth for
 requirements and data rules. This is an educational prototype, not an
 operational tool.
 
+**Live dashboard:** https://bato-flood-access.onrender.com/ shows the official Trishuli result (road rule v1)
+with the SITREP Copilot. It runs on a free instance, so the first request after a period of inactivity can take
+about a minute ([docs/deployment.md](docs/deployment.md)).
+
 ---
 
 ## Release status
@@ -28,6 +32,12 @@ operational tool.
 3. **Dashboard** of that v1 run (hashes verified, summary recomputed, v2 refused).
 4. **EMSR927 case-study comparison**, run afterwards as **evaluation only** under the frozen, pre-registered
    protocol `bato-emsr927-v1` ([docs/evaluation/emsr927_protocol.md](docs/evaluation/emsr927_protocol.md)).
+5. **One-page SITREP** of that v1 run, filled from the verified results by a deterministic template (no AI):
+   `scripts/build_sitrep.py` ([docs/sitrep.md](docs/sitrep.md)).
+6. **SITREP Copilot (AI component)** in the dashboard: a language model (Gemini, called only from the server)
+   answers questions in English or Nepali and translates the SITREP into Nepali, using only the hash-verified v1
+   evidence. Answers cite their evidence items, every number is checked against the cited items, and questions the
+   evidence cannot answer are declined ([docs/copilot.md](docs/copilot.md)).
 
 **Not part of the official result:**
 - **Road rule v2 and the SAR disturbance (debris) detector.** This was an experiment, **rejected** under its
@@ -50,7 +60,10 @@ operational tool.
 | FloodViT inference (Step 4B) | Implemented; preliminary; **not validated; not official** ([docs/inference.md](docs/inference.md)) |
 | SAR disturbance (debris) detector + road rule v2 | Implemented as an experiment; **rejected; not official** ([docs/debris_detection.md](docs/debris_detection.md)) |
 | Slice assembly (multi-slice passes), Sentinel-2, flood-model training, fusion | **NOT IMPLEMENTED** |
-| Building / bridge / facility impact prediction, situation report | **NOT IMPLEMENTED** |
+| One-page SITREP from the official v1 run (deterministic template, `scripts/build_sitrep.py`; no AI) | Implemented ([docs/sitrep.md](docs/sitrep.md)) |
+| SITREP Copilot (AI component): English/Nepali questions, Nepali SITREP translation, evidence citations, numbers checked against the cited evidence | Implemented ([docs/copilot.md](docs/copilot.md)); needs an LLM provider via `BATO_LLM_*` |
+| Public deployment (Render) | Live at https://bato-flood-access.onrender.com/ ([docs/deployment.md](docs/deployment.md)) |
+| Building / bridge / facility impact prediction | **NOT IMPLEMENTED** |
 | Kuro Siwo test-event and Himalayan-holdout evaluation | **NOT IMPLEMENTED** |
 
 BATO searches the Sentinel-1 catalogue and downloads a same-track PRE-1 / PRE-2 / POST set. It calibrates and
@@ -277,6 +290,55 @@ python scripts/serve_dashboard.py --open
 
 Builds `data/processed/dashboard/<aoi>/<candidate_id>/` from the official road-rule v1 connectivity run (hashes verified, summary recomputed, v2 refused) and serves it on http://127.0.0.1:8765/ ([docs/dashboard.md](docs/dashboard.md)). It runs offline: the base map is local (DEM hillshade), and no online tile service or API key is used. The dashboard shows no EMSR927 data.
 
+### Situation report (SITREP)
+
+```bash
+python scripts/build_sitrep.py --manifest data/raw/manifests/<aoi>_fetch_manifest.json --title "<name>" \
+    --incident "<one-line incident description>" --prepared-by "404 Competition Not Found"
+```
+
+Writes `reports/BATO_SITREP.md`, a one-page SITREP of the official road-rule v1 run made by a deterministic template
+(no AI). It re-runs the dashboard integrity checks (v1 only, output hashes, summary recomputed from the layers) and
+stops on any mismatch ([docs/sitrep.md](docs/sitrep.md)).
+
+### SITREP Copilot (AI component)
+
+The dashboard's **Copilot** tab answers questions about blocked and unobservable roads, settlement access,
+observation dates, uncertainty and field-verification priorities, in English or Nepali. It also produces the SITREP
+in English (the deterministic template above, labelled "no AI") or in Nepali (an AI translation of it).
+
+- The model runs only on the server and sees only the hash-verified official v1 evidence.
+- Every answer must cite evidence items, and every number in it must appear in the items it cites. Otherwise the
+  answer is withheld and the verified evidence is shown instead.
+- Questions the evidence cannot answer (for example population, casualties or forecasts) are declined.
+- A Nepali SITREP is accepted only if its numbers match the English SITREP and the attribution lines are unchanged.
+
+Configure the provider with environment variables before starting the server. The key stays on the server and is
+never sent to the browser. Without a provider, the panel says the Copilot is unavailable and everything else works.
+Windows PowerShell:
+
+```powershell
+$env:BATO_LLM_PROVIDER="openai"
+$env:BATO_LLM_BASE_URL="https://generativelanguage.googleapis.com/v1beta/openai/"
+$env:BATO_LLM_MODEL="gemini-3.5-flash-lite"
+$env:BATO_LLM_API_KEY="<your key>"
+python scripts/serve_dashboard.py --open
+```
+
+Details, other providers and the checks: [docs/copilot.md](docs/copilot.md).
+
+### Public deployment
+
+The live dashboard runs this same server on Render, with the official read-only data packed by
+`scripts/deploy_data.py` and installed with SHA-256 checks at build time.
+
+- Build command: `pip install . && python scripts/deploy_data.py install`
+- Start command: `python scripts/serve_dashboard.py --host 0.0.0.0 --check-evidence --trust-proxy`
+- `/healthz` reports whether the official evidence was verified at start-up.
+- Copilot requests are rate-limited on the public server.
+
+Settings and data packaging: [docs/deployment.md](docs/deployment.md).
+
 ### FloodViT inference (Step 4B): preliminary, not part of the official result
 
 ```bash
@@ -318,6 +380,9 @@ python scripts/run_baseline_detection.py --manifest $M
 python scripts/fetch_osm_snapshot.py --manifest $M
 python scripts/run_connectivity.py --manifest $M --road-rule v1        # OFFICIAL rule: always explicit
 python scripts/build_dashboard.py --manifest $M --title Trishuli
+python scripts/build_sitrep.py --manifest $M --title "Trishuli Flood, Nepal" \
+    --incident "flood, Bhote Koshi–Trishuli corridor (Rasuwa/Nuwakot), Nepal" \
+    --prepared-by "404 Competition Not Found"                              # -> reports/BATO_SITREP.md
 python scripts/serve_dashboard.py --open
 ```
 
@@ -392,6 +457,9 @@ SNAP's processing is correct; real-SNAP checks are opt-in
 - **Timing.** Sentinel-1 revisits every few days, so BATO maps the state at the POST pass and cannot warn ahead
   of a sudden event.
 - **OSM completeness.** Road access depends on how complete the pre-event OSM is.
+- **Copilot.** It explains and translates the official result and adds no measurement. Even when every number is
+  checked, a model can word an answer badly, so the cited evidence is what to check. A cloud model needs internet
+  access and an API key.
 
 Full list: [docs/limitations.md](docs/limitations.md).
 

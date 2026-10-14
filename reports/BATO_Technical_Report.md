@@ -1,13 +1,13 @@
 # BATO: Radar-Based Road Access Assessment After the August 2026 Trishuli Flood
 
 **Multimodal AI Hackathon 2026 — Track B: Mapping Flood Damage from Space**
-Team: 404 Competition Not Found · Authors: Mandeep Kumar Roshan, Anish Rana, Prabhnoor Singh, Arshbir Singh · Repository: https://github.com/Mandeep2807/bato-flood-access · Date: October 2026
+Team: 404 Competition Not Found · Authors: Mandeep Kumar Roshan, Anish Rana, Prabhnoor Singh, Arshbir Singh · Repository: https://github.com/Mandeep2807/bato-flood-access · Live dashboard: https://bato-flood-access.onrender.com/ · Date: October 2026
 
 ## Executive Summary
 
 BATO (Nepali for "road") uses Sentinel-1 radar and pre-event OpenStreetMap (OSM) to answer one question after a mountain flood: which roads show flood evidence, and which settlements may have lost road access? Where the satellite cannot tell, BATO says "unknown", never "no damage".
 
-The official result for the Trishuli valley, Nepal (event 2026-08-26) combines a deterministic SAR change rule for flood, a road rule, a three-graph analysis of settlement access and an offline dashboard in which every number traces back to hash-verified evidence. 91.2 % of the scene could not be assessed, mostly because of steep slopes, so 2,942 of 3,407 road-km are unobservable. BATO finds 30 blocked road segments (1.2 km), confirms 1 settlement as connected and none as cut off; 163 of 265 settlements have access that remains unverified. As evaluation only, we compared the result with Copernicus EMS activation EMSR927 under a protocol frozen before any metric was computed. Both matched BATO-blocked segments were graded *Destroyed* there, but BATO missed most reference-damaged roads (matched-domain recall 0.018 on observed segments). Flood metrics are not calculable, because EMSR927 has no flood class. Thresholds are provisional and the system is not validated.
+The official result for the Trishuli valley, Nepal (event 2026-08-26) combines a deterministic SAR change rule for flood, a road rule, a three-graph analysis of settlement access and an offline dashboard in which every number traces back to hash-verified evidence. A SITREP Copilot (the AI component) answers questions and writes situation reports in English and Nepali from the same evidence. 91.2 % of the scene could not be assessed, mostly because of steep slopes, so 2,942 of 3,407 road-km are unobservable. BATO finds 30 blocked road segments (1.2 km), confirms 1 settlement as connected and none as cut off; 163 of 265 settlements have access that remains unverified. As evaluation only, we compared the result with Copernicus EMS activation EMSR927 under a protocol frozen before any metric was computed. Both matched BATO-blocked segments were graded *Destroyed* there, but BATO missed most reference-damaged roads (matched-domain recall 0.018 on observed segments). Flood metrics are not calculable, because EMSR927 has no flood class. Thresholds are provisional and the system is not validated.
 
 ## 1. Operational Problem
 
@@ -133,19 +133,24 @@ The **primary comparison** is BATO BLOCKED against EMSR927 road *Destroyed*, poo
 
 BATO was highly conservative. Both blocked segments in the matched domain were graded Destroyed and none was graded undamaged, but a precision from two segments says little. Most reference-damaged segments were not flagged. Of the 490 matched Destroyed segments, 380 were UNOBSERVABLE, meaning BATO could not assess them under its visibility rules. The other 108 were observed but had no open-water signal, which is expected: a road buried by a debris flow need not look like water. About 88 % of the Destroyed road length lies in the matched domain. This is a one-event case study of agreement, not a validation.
 
-## 8. Limitations
+## 8. SITREP Copilot (AI Component)
+
+The English one-page SITREP is a deterministic template; no model is involved. The Copilot is a language model (Gemini, called only from the server, so the key never reaches the browser) that answers questions in English or Nepali using only the hash-verified v1 evidence and must cite the items it uses. The server withholds any answer, after one retry, whose numbers are not in the cited items, and the Copilot declines questions the evidence cannot answer (population, casualties, forecasts). The Nepali SITREP is an AI translation, accepted only if its numbers and attribution statements match the English source exactly.
+
+## 9. Limitations
 
 - **Detection.** Step 4C is not validated and its thresholds are provisional. It detects new open-water darkening only, so it misses mud, debris, landslide scars, structural damage, rough water and flooded vegetation; fresh sediment can look like water.
 - **Observability.** One ascending pass leaves 91 % of the scene unassessed. Layover and shadow are approximated from a nominal incidence angle, and the 15° gate on a 30 m DEM can mark gorge floors as steep.
 - **Infrastructure.** Access depends on pre-event OSM completeness; the 101 settlements without road access reflect unmapped roads, not the flood. Building counts are not population. Bridges can be "exposed", never "collapsed".
 - **Time and evaluation.** One pass, two days after the event. EMS timestamps carry no time zone, so gaps are reported in both UTC and Nepal time. One event of a different hazard class supports no general accuracy claim.
+- **AI component.** The Copilot adds no measurement; its checks catch invented numbers, not poor wording.
 - **Engineering.** Multi-slice passes are not mosaicked. The connectivity script still defaults to road rule v2, so the official result must be reproduced with `--road-rule v1`.
 
-## 9. Reproducibility and Data Governance
+## 10. Reproducibility and Data Governance
 
-The README gives the full sequence: catalogue query, selection and download (`--track ASCENDING/85`) → SNAP processing and stacking → `run_baseline_detection.py` → `fetch_osm_snapshot.py` → `run_connectivity.py --road-rule v1` → `build_dashboard.py`. It needs Copernicus Data Space credentials, ESA SNAP and an `OHSOME_API_KEY` read from the environment (never written to config, provenance or logs). Outputs are published atomically and earlier ones are kept as `.superseded-*`. A repeated evaluation under the frozen protocol must reproduce the first run exactly.
+The README gives the full sequence: catalogue query, selection and download (`--track ASCENDING/85`) → SNAP processing and stacking → `run_baseline_detection.py` → `fetch_osm_snapshot.py` → `run_connectivity.py --road-rule v1` → `build_dashboard.py` → `build_sitrep.py`. It needs Copernicus Data Space credentials, ESA SNAP and an `OHSOME_API_KEY` read from the environment (never written to config, provenance or logs). Outputs are published atomically and earlier ones are kept as `.superseded-*`. A repeated evaluation under the frozen protocol must reproduce the first run exactly.
 
-Population grids, JRC water, UNOSAT or EMS products as input, post-event OSM and external flood maps are never used. The latest full test-suite run on the actual repository gave 876 passed, 6 skipped and 0 failed.
+Population grids, JRC water, UNOSAT or EMS products as input, post-event OSM and external flood maps are never used. Automated tests (`pytest`) cover the pipeline, dashboard, SITREP and Copilot (mocked model); the latest provider and deployment changes were checked with focused tests, not a new full-suite run.
 
 **Attribution.**
 
@@ -154,7 +159,7 @@ Population grids, JRC water, UNOSAT or EMS products as input, post-event OSM and
 - © OpenStreetMap contributors.
 - Evaluation reference only: European Union, Copernicus Emergency Management Service data (EMSR927).
 
-## 10. Conclusion
+## 11. Conclusion
 
 BATO delivers a complete, reproducible chain from Sentinel-1 imagery to a responder-facing answer:
 
@@ -162,7 +167,8 @@ BATO delivers a complete, reproducible chain from Sentinel-1 imagery to a respon
 - **road blockage assessment** on the pre-event OSM network;
 - **uncertainty-aware settlement access**, which separates confirmed results from unverified ones;
 - an **evidence and provenance record** behind every claim;
-- an **offline operational dashboard** that needs no internet connection or tile service.
+- an **offline operational dashboard** that needs no internet connection or tile service;
+- a **one-page SITREP** and an evidence-grounded **SITREP Copilot** in English and Nepali.
 
 At Trishuli it located 30 blocked segments in 9 stretches, confirmed 0 settlements as cut off, and showed that 163 settlements have access that remains unverified, which tells responders where ground or aerial checks are needed. The two blocked segments that EMSR927 could check agreed with it; the same comparison shows that an open-water rule does not capture debris-flow damage.
 
