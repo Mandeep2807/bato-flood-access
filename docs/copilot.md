@@ -72,6 +72,7 @@ in the local server process:
 | `BATO_LLM_API_KEY` | API key. Not needed for an OpenAI-compatible server on `localhost`. |
 | `BATO_LLM_BASE_URL` | Optional. Defaults to `https://api.openai.com/v1` or `https://api.anthropic.com`. Plain `http` is allowed only for localhost. |
 | `BATO_LLM_TIMEOUT_S` | Optional request timeout in seconds (default 60). |
+| `BATO_LLM_MAX_TOKENS` | Optional output-token limit (default 8192). Gemini counts its thinking tokens against it. |
 
 Windows PowerShell:
 
@@ -86,6 +87,17 @@ macOS / Linux:
 export BATO_LLM_PROVIDER=anthropic BATO_LLM_MODEL=claude-sonnet-4-5 BATO_LLM_API_KEY=<your key>
 python scripts/serve_dashboard.py --open
 ```
+
+Google Gemini through its OpenAI-compatible endpoint (short model id, no `models/` prefix):
+
+```powershell
+$env:BATO_LLM_PROVIDER="openai"; $env:BATO_LLM_MODEL="gemini-3.5-flash-lite"
+$env:BATO_LLM_BASE_URL="https://generativelanguage.googleapis.com/v1beta/openai/"; $env:BATO_LLM_API_KEY="<your key>"
+```
+
+HTTP 429, 5xx and dropped connections are retried twice with backoff. Errors shown in the panel include the
+provider's own reason (for example `UNAVAILABLE: This model is currently experiencing high demand`), with the key
+redacted.
 
 A local model keeps everything offline, for example Ollama:
 
