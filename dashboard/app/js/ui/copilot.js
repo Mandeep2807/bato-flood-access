@@ -18,6 +18,7 @@ const STATUS_LABEL = {
   withheld: "Answer withheld: failed the evidence check",
   unavailable: "Copilot unavailable",
   provider_error: "Model provider error",
+  rate_limited: "Request limit reached",
   no_evidence: "Official result not available",
 };
 

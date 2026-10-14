@@ -1,0 +1,28 @@
+# Render Blueprint for the public BATO dashboard + SITREP Copilot (see docs/deployment.md).
+# The official data comes from deploy/bato_official_data.tar.gz (built with `scripts/deploy_data.py pack`),
+# installed with SHA-256 checks at build time. The API key is a Render secret (sync: false): never in Git.
+services:
+  - type: web
+    name: bato-flood-access
+    runtime: python
+    plan: free
+    buildCommand: pip install . && python scripts/deploy_data.py install
+    startCommand: python scripts/serve_dashboard.py --host 0.0.0.0 --check-evidence --trust-proxy
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.11
+      - key: BATO_LLM_PROVIDER
+        value: openai
+      - key: BATO_LLM_BASE_URL
+        value: https://generativelanguage.googleapis.com/v1beta/openai/
+      - key: BATO_LLM_MODEL
+        value: gemini-3.5-flash-lite
+      - key: BATO_LLM_API_KEY
+        sync: false            # Render asks for the value when the Blueprint is created
+      - key: BATO_COPILOT_PER_MINUTE
+        value: "6"
+      - key: BATO_COPILOT_PER_DAY
+        value: "200"
+      - key: BATO_COPILOT_CONCURRENCY
+        value: "2"
