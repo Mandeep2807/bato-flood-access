@@ -3,6 +3,7 @@ import { km1, int, pct, day, esc, kmOrM, plural, ACCESS, ACCESS_LABEL, COLORS, s
   roadName, unverifiedRouteStats } from "../data.js";
 import { LAYERS } from "../map.js";
 import { badge } from "./dom.js";
+import { copilotPanel } from "./copilot.js";
 
 export const SECTIONS = [
   { key: "incident", label: "Incident", title: "Incident" },
@@ -12,6 +13,7 @@ export const SECTIONS = [
   { key: "evidence", label: "Evidence", title: "Evidence chain" },
   { key: "operations", label: "Ops", title: "Operations" },
   { key: "methodology", label: "Method", title: "Methodology" },
+  { key: "copilot", label: "Copilot", title: "SITREP Copilot" },
 ];
 
 const MAIN_REASON_SENTENCE = {
@@ -23,7 +25,8 @@ const MAIN_REASON_SENTENCE = {
 };
 
 export function render(key, body, app) {
-  const fn = { incident, map: mapPanel, access, observability, evidence, operations, methodology }[key];
+  const fn = { incident, map: mapPanel, access, observability, evidence, operations, methodology,
+    copilot: copilotPanel }[key];
   body.innerHTML = "";
   fn(body, app);
   body.scrollTop = 0;

@@ -12,6 +12,7 @@ export const ICON = {
   evidence: '<svg viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="6" cy="19" r="2"/><path d="M6 7v3M6 14v3M10 5h10M10 12h10M10 19h7"/></svg>',
   operations: '<svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>',
   methodology: '<svg viewBox="0 0 24 24"><path d="M4 5h6a2 2 0 012 2v13a2 2 0 00-2-2H4zM20 5h-6a2 2 0 00-2 2v13a2 2 0 012-2h6z"/></svg>',
+  copilot: '<svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>',
   blocked: '<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M3.8 12.2l8.4-8.4"/></svg>',
   open: '<svg viewBox="0 0 16 16"><path d="M2 12c3-1 4-8 7-8s3 5 5 5"/></svg>',
   unobservable: '<svg viewBox="0 0 16 16"><path d="M2 12l4-7 3 4 2-2 3 5z"/><path d="M1 1l14 14" /></svg>',

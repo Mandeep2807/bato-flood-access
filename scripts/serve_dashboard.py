@@ -5,6 +5,10 @@
 
 Serves ``dashboard/app/`` at ``/`` and the built bundles (``<processed>/dashboard/``, written by
 scripts/build_dashboard.py) at ``/bundles/``. Read-only; binds to localhost by default.
+
+``/api/copilot/*`` serves the SITREP Copilot (bato.copilot.api). It needs an LLM provider configured through
+environment variables (BATO_LLM_PROVIDER, BATO_LLM_MODEL, BATO_LLM_API_KEY; see docs/copilot.md); without one the
+copilot reports itself unavailable and the rest of the dashboard works as before.
 Exit codes: 0 stopped, 1 no bundle built yet / invalid config.
 """
 
@@ -13,6 +17,7 @@ from __future__ import annotations
 import argparse
 import gzip
 import http.server
+import json
 import mimetypes
 import sys
 import webbrowser
@@ -21,6 +26,8 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 from bato.config import load_config
+from bato.copilot.api import handle as copilot_handle
+from bato.copilot.service import CopilotService
 from bato.exceptions import ConfigError
 
 REPO = Path(__file__).resolve().parents[1]
@@ -31,6 +38,28 @@ TYPES = {".js": "text/javascript", ".mjs": "text/javascript", ".css": "text/css"
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     bundles: Path = Path(".")
+    copilot: CopilotService | None = None
+
+    def _copilot(self, method: str) -> None:
+        if self.copilot is None:
+            status, payload = 503, {"status": "unavailable", "error": "Copilot unavailable: not started"}
+        else:
+            n = int(self.headers.get("Content-Length") or 0)
+            body = self.rfile.read(min(n, 1 << 20)) if n > 0 else b""
+            status, payload = copilot_handle(self.copilot, method, urlsplit(self.path).path, self.headers, body)
+        data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(data)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        self.wfile.write(data)
+
+    def do_POST(self) -> None:  # noqa: N802
+        if urlsplit(self.path).path.startswith("/api/copilot/"):
+            self._copilot("POST")
+        else:
+            self.send_error(405)
 
     def translate(self) -> Path | None:
         path = unquote(urlsplit(self.path).path)
@@ -46,6 +75,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         return target if target.is_file() else None
 
     def do_GET(self) -> None:  # noqa: N802
+        if urlsplit(self.path).path.startswith("/api/copilot/"):
+            self._copilot("GET")
+            return
         target = self.translate()
         if target is None:
             self.send_error(404)
@@ -88,9 +120,13 @@ def main() -> int:
         return 1
     handler = partial(Handler)
     Handler.bundles = bundles
+    Handler.copilot = CopilotService(cfg)
     server = http.server.ThreadingHTTPServer((args.host, args.port), handler)
     url = f"http://{args.host}:{args.port}/"
     print(f"BATO dashboard: {url}  (bundles from {bundles}; Ctrl+C to stop)")
+    st = Handler.copilot.status()
+    print("SITREP Copilot: " + (f"available ({st['provider']}:{st['model']})" if st["available"]
+                                 else f"unavailable - {st['reason']}"))
     if args.open:
         webbrowser.open(url)
     try:

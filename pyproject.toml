@@ -48,7 +48,8 @@ select = ["E", "F", "W", "B", "UP", "I"]
 [tool.ruff.lint.isort]
 known-first-party = ["bato"]
 known-local-folder = ["helpers", "snap_fakes", "speckle_fakes", "terrain_fakes", "stack_fakes", "inference_fakes",
-                      "connectivity_fakes", "dashboard_fakes", "ems_fakes", "sitrep_fakes"]
+                      "connectivity_fakes", "dashboard_fakes", "ems_fakes", "sitrep_fakes",
+                      "copilot_fakes"]
 
 # rasterio (optional, Step 3.2 validation) ships without type information.
 [[tool.mypy.overrides]]
